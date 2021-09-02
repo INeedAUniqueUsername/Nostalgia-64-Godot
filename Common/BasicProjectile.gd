@@ -26,6 +26,15 @@ func body_entered(body):
 		if(p == creator):
 			return
 		p = p.get_parent();
+		
+	p = body;
+	while(p != null):
+		var hp = p.get_node("HP")
+		if(hp != null):
+			hp.damage(damage)
+			break
+		else:
+			p = p.get_parent()
 	
 	if(projectileParticles):
 		

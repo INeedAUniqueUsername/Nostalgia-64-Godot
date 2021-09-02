@@ -1,15 +1,16 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Hull.svg" type="Texture" id=1]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Cannon.svg" type="Texture" id=2]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Drive.svg" type="Texture" id=1]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorCannon.svg" type="Texture" id=2]
 [ext_resource path="res://Fire.gd" type="Script" id=3]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/BeamRight.tscn" type="PackedScene" id=4]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorCannon.svg" type="Texture" id=5]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Cannon.svg" type="Texture" id=4]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Hull.svg" type="Texture" id=5]
 [ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/BeamLeft.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Drive.svg" type="Texture" id=8]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/BeamRight.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Thrust.gd" type="Script" id=9]
 [ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Exhaust.tscn" type="PackedScene" id=10]
+[ext_resource path="res://HP.gd" type="Script" id=11]
 
 [node name="Hull" type="RigidBody"]
 mass = 100.0
@@ -20,12 +21,16 @@ axis_lock_angular_y = true
 linear_damp = 0.0
 angular_damp = 0.0
 
+[node name="HP" type="Node" parent="."]
+script = ExtResource( 11 )
+hp = 300
+
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="."]
 depth = 0.1
 polygon = PoolVector2Array( 0.00396932, -0.212267, 0.00404694, -0.119572, -0.0460807, -0.184964, -0.235692, -0.53406, -0.237419, -0.312721, -0.535456, -0.167984, -0.484722, -0.00357318, -0.554404, 0.188247, -0.236351, 0.33825, -0.235698, 0.535894, -0.0542135, 0.206194, -0.00213645, 0.147972, 0.00217297, 0.236735, 0.544993, 0.00800239 )
 
 [node name="Sprite" type="Sprite3D" parent="."]
-texture = ExtResource( 1 )
+texture = ExtResource( 5 )
 
 [node name="CannonLeft" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.4, 0 )
@@ -42,8 +47,13 @@ projectile = ExtResource( 7 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 
+[node name="HP" type="Node" parent="CannonLeft"]
+script = ExtResource( 11 )
+hp = 60
+
 [node name="Sprite" type="Sprite3D" parent="CannonLeft"]
-texture = ExtResource( 2 )
+pixel_size = 0.015
+texture = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="CannonLeft"]
 depth = 0.1
@@ -77,8 +87,12 @@ projectile = ExtResource( 6 )
 fireCooldown = 0.8
 position = NodePath("../Beam")
 
+[node name="HP" type="Node" parent="TractorCannon"]
+script = ExtResource( 11 )
+hp = 60
+
 [node name="Sprite" type="Sprite3D" parent="TractorCannon"]
-texture = ExtResource( 5 )
+texture = ExtResource( 2 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="TractorCannon"]
 depth = 0.1
@@ -108,12 +122,17 @@ linear_damp = 0.0
 
 [node name="FireRight" type="Node" parent="CannonRight"]
 script = ExtResource( 3 )
-projectile = ExtResource( 4 )
+projectile = ExtResource( 8 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 
+[node name="HP" type="Node" parent="CannonRight"]
+script = ExtResource( 11 )
+hp = 60
+
 [node name="Sprite" type="Sprite3D" parent="CannonRight"]
-texture = ExtResource( 2 )
+pixel_size = 0.015
+texture = ExtResource( 4 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="CannonRight"]
 depth = 0.1
@@ -133,7 +152,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
 [node name="Drive" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.6, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638742, 0, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -141,23 +160,21 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
+[node name="HP" type="Node" parent="Drive"]
+script = ExtResource( 11 )
+hp = 150
+
 [node name="Sprite" type="Sprite3D" parent="Drive"]
-texture = ExtResource( 8 )
+texture = ExtResource( 1 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="Drive"]
 depth = 0.1
 polygon = PoolVector2Array( 0.131269, 0.0317362, 0.128776, -0.0190162, 0.0745002, -0.180896, -0.130869, -0.180528, -0.0663471, -0.0111844, -0.0673966, 0.0233299, -0.126683, 0.18836, 0.0735757, 0.191098 )
 
-[node name="HingeJoint" type="HingeJoint" parent="Drive"]
+[node name="PinJoint" type="PinJoint" parent="Drive"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 params/bias = 0.01
-angular_limit/enable = true
-angular_limit/upper = 1.0
-angular_limit/lower = -1.0
-angular_limit/bias = 0.01
-angular_limit/softness = 0.01
-angular_limit/relaxation = 0.01
 
 [node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 9 )

@@ -45,7 +45,6 @@ polygon = PoolVector2Array( -0.0206488, 0.0201263, 0.0220443, 0.0192993, 0.02274
 
 [node name="Projectile" type="Node" parent="."]
 script = ExtResource( 6 )
-creator = null
-damage = null
+damage = 15
 projectileParticles = NodePath("../SpriteTrail")
 hitEffect = ExtResource( 7 )
