@@ -198,20 +198,20 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, 0 )
 
 [node name="Controls" type="Node" parent="."]
 
-[node name="Fire Left" type="Node" parent="Controls"]
+[node name="FireLeft" type="Node" parent="Controls"]
 script = ExtResource( 11 )
 target = NodePath("../../CannonLeft/Fire")
-action = "ui_fire_left"
+action = "Q"
 
-[node name="Fire Right" type="Node" parent="Controls"]
+[node name="FireRight" type="Node" parent="Controls"]
 script = ExtResource( 11 )
 target = NodePath("../../CannonRight/Fire")
-action = "ui_fire_right"
+action = "E"
 
-[node name="Fire Special" type="Node" parent="Controls"]
+[node name="FireSpecial" type="Node" parent="Controls"]
 script = ExtResource( 11 )
 target = NodePath("../../TractorCannon/Fire")
-action = "ui_fire_special"
+action = "R"
 
 [node name="ThrustLeft" type="Node" parent="Controls"]
 script = ExtResource( 11 )
