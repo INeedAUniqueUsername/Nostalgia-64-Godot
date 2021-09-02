@@ -27,7 +27,6 @@ lifetime = 1.0
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false
 angular_damp = 1.0
-collision_layer = 0
 collision_mask = 0
 script = ExtResource( 4 )
 
@@ -38,5 +37,5 @@ polygon = PoolVector2Array( -0.071923, 0.179598, 0.0100234, 0.180565, 0.068736, 
 [node name="Projectile" type="Node" parent="."]
 script = ExtResource( 5 )
 creator = null
-damage = 1
+damage = 3
 projectileParticles = null

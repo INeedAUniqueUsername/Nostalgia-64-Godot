@@ -94,6 +94,3 @@ playerRight = NodePath("../RightPlayer")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )
-
-[editable path="RightPlayer"]
-[editable path="LeftPlayer"]

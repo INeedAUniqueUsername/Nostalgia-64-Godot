@@ -152,7 +152,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
 [node name="Drive" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.638742, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.653448, 0, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -174,7 +174,7 @@ polygon = PoolVector2Array( 0.131269, 0.0317362, 0.128776, -0.0190162, 0.0745002
 [node name="PinJoint" type="PinJoint" parent="Drive"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-params/bias = 0.01
+params/bias = 0.1
 
 [node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 9 )
