@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="26"
+   height="37"
+   viewBox="0 0 6.8791677 9.7895815"
+   version="1.1"
+   id="svg8"
+   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   sodipodi:docname="Drive.svg"
+   inkscape:export-filename="C:\Users\Alex\Documents\Nostalgia 64\Sprites\Green Lancers\Greenhorn-class Heavy Gunship\Drive.png"
+   inkscape:export-xdpi="120"
+   inkscape:export-ydpi="120">
+  <defs
+     id="defs2" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="15.839192"
+     inkscape:cx="5.6465761"
+     inkscape:cy="24.003292"
+     inkscape:document-units="mm"
+     inkscape:current-layer="layer1"
+     showgrid="true"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1317"
+     inkscape:window-height="1041"
+     inkscape:window-x="593"
+     inkscape:window-y="0"
+     inkscape:window-maximized="0"
+     units="px"
+     inkscape:pagecheckerboard="true">
+    <inkscape:grid
+       type="xygrid"
+       id="grid837"
+       empspacing="4"
+       originx="-31.897381"
+       originy="22.224989" />
+  </sodipodi:namedview>
+  <metadata
+     id="metadata5">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-141.93379,-178.86732)">
+    <path
+       style="fill:none;stroke:#00dd00;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 145.49058,184.15899 -1.5875,4.23333 h -1.5875 l 1.5875,-4.23333 v -0.79375 l -1.5875,-4.23333 h 1.5875 l 1.5875,4.23333 z"
+       id="path836"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#00dd00;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 147.07808,184.15899 -1.5875,4.23333 h -1.5875 l 1.5875,-4.23333 v -0.79375 l -1.5875,-4.23333 h 1.5875 l 1.5875,4.23333 z"
+       id="path836-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#00dd00;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1"
+       d="m 148.66558,184.15899 -1.5875,4.23333 h -1.5875 l 1.5875,-4.23333 v -0.79375 l -1.5875,-4.23333 h 1.5875 l 1.5875,4.23333 z"
+       id="path836-5-4"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

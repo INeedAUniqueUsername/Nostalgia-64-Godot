@@ -1,0 +1,48 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorBeam.svg" type="Texture" id=1]
+[ext_resource path="res://Common/Lifetime.gd" type="Script" id=2]
+[ext_resource path="res://Common/ParentArea.gd" type="Script" id=3]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/SpriteTrail.gd" type="Script" id=4]
+[ext_resource path="res://Common/SimpleTrail.gd" type="Script" id=5]
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorWave.tscn" type="PackedScene" id=6]
+[ext_resource path="res://Common/Pull.gd" type="Script" id=7]
+
+[node name="TractorBeam" type="RigidBody"]
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+opacity = 0.4
+texture = ExtResource( 1 )
+
+[node name="Lifetime" type="Node" parent="."]
+script = ExtResource( 2 )
+lifetime = 4.0
+
+[node name="Area" type="Area" parent="."]
+input_ray_pickable = false
+angular_damp = 1.0
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Area"]
+depth = 0.1
+polygon = PoolVector2Array( -0.111373, 0.0997364, -0.166034, 0.0364386, -0.234675, 0.0179987, -0.228011, -0.0231091, -0.160645, -0.0341868, -0.117611, -0.0808618, -0.0529597, -0.0897431, 0.00658217, -0.163182, 0.111059, -0.168599, 0.0116097, -0.0292004, 0.1403, -0.0219975, 0.132564, -0.105448, 0.241097, -0.022202, 0.238264, 0.0374574, 0.140869, 0.114972, 0.132692, 0.0298952, 0.0103043, 0.026326, 0.112006, 0.169698, -0.00830137, 0.17442, -0.0554027, 0.0927701 )
+
+[node name="SpriteTrail" type="Node" parent="."]
+script = ExtResource( 4 )
+texture = ExtResource( 1 )
+spawnInterval = 0.01
+particleLifetime = 0.1
+startOpacity = 0.4
+
+[node name="WaveTrail" type="Node" parent="."]
+script = ExtResource( 5 )
+trail = ExtResource( 6 )
+interval = 0.01
+
+[node name="Pull" type="Node" parent="."]
+script = ExtResource( 7 )
+strength = 3.0

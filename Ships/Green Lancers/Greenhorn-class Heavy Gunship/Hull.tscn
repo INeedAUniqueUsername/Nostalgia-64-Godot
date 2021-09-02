@@ -1,0 +1,42 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Hull.svg" type="Texture" id=1]
+
+
+[node name="RigidBody2D" type="RigidBody2D"]
+
+position = Vector2( -0.17482, -0.349651 )
+input_pickable = false
+collision_layer = 1
+collision_mask = 1
+mode = 0
+mass = 5.0
+friction = 1.0
+bounce = 0.0
+gravity_scale = 1.0
+custom_integrator = false
+continuous_cd = 0
+contacts_reported = 0
+contact_monitor = false
+sleeping = false
+can_sleep = true
+linear_velocity = Vector2( 0, 0 )
+linear_damp = 0.0
+angular_velocity = 1.0
+angular_damp = 0.0
+_sections_unfolded = [ "Angular", "Applied Forces", "Collision", "Linear", "Pickable" ]
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="." index="0"]
+
+position = Vector2( -1.52588e-05, 0 )
+build_mode = 0
+polygon = PoolVector2Array( 29.7427, -22.5161, 84.8281, -0.981106, 30.0078, 22.2643, 28.2644, 14.7095, 24.1964, 19.9397, 5.60013, 53.0644, 5.98755, 32.3372, -25.3937, 17.6152, -19.5823, 1.14972, -25.3937, -18.9963, 4.82529, -32.9435, 6.38359, -52.883, 23.9029, -21.0562, 29.4507, -14.9244 )
+_sections_unfolded = [ "Transform" ]
+
+[node name="Sprite" type="Sprite" parent="." index="1"]
+
+position = Vector2( 30, 0 )
+texture = ExtResource( 1 )
+_sections_unfolded = [ "Transform" ]
+
+
