@@ -10,6 +10,14 @@ Nostalgia 64 is a physics-based spaceship fighting game. Take control of a heavy
 - Every part of your ship is destructible
   - And losing each part makes it unusable for the rest of the fight
   
+## Ships
+### Greenhorn
+This heavy gunship features a unified engine, two weaving energy beams, and a wave weapon capable of pulling enemies closer
+
+- Fire Left: Sine energy beam
+- Fire Right: Sine energy beam
+- Fire Special: Force wave
+  
 ## Controls
 | Key   | Action |
 | :---- | :----  |
