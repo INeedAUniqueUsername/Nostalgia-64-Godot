@@ -1,7 +1,7 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Exhaust.svg" type="Texture" id=1]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/SpriteFade.gd" type="Script" id=2]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Exhaust.svg" type="Texture" id=1]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/SpriteFade.gd" type="Script" id=2]
 [ext_resource path="res://Common/Lifetime.gd" type="Script" id=3]
 [ext_resource path="res://Common/ParentArea.gd" type="Script" id=4]
 [ext_resource path="res://Common/BasicProjectile.gd" type="Script" id=5]

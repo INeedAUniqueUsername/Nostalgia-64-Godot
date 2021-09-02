@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Hull.svg-461877c6cc68c22b703772ce7ee08f56.s3tc.stex"
-path.etc2="res://.import/Hull.svg-461877c6cc68c22b703772ce7ee08f56.etc2.stex"
+path.s3tc="res://.import/Exhaust.svg-5c02c0ddd760d7c5a72f204fd71c5b1b.s3tc.stex"
+path.etc2="res://.import/Exhaust.svg-5c02c0ddd760d7c5a72f204fd71c5b1b.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Hull.svg"
-dest_files=[ "res://.import/Hull.svg-461877c6cc68c22b703772ce7ee08f56.s3tc.stex", "res://.import/Hull.svg-461877c6cc68c22b703772ce7ee08f56.etc2.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Exhaust.svg"
+dest_files=[ "res://.import/Exhaust.svg-5c02c0ddd760d7c5a72f204fd71c5b1b.s3tc.stex", "res://.import/Exhaust.svg-5c02c0ddd760d7c5a72f204fd71c5b1b.etc2.stex" ]
 
 [params]
 

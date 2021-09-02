@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/TractorBeam.svg-6fd31b3f9d313a14ee3a1c02d12c827e.s3tc.stex"
-path.etc2="res://.import/TractorBeam.svg-6fd31b3f9d313a14ee3a1c02d12c827e.etc2.stex"
+path.s3tc="res://.import/Hull.svg-4b5eb4e43411dcdad17c203499bab790.s3tc.stex"
+path.etc2="res://.import/Hull.svg-4b5eb4e43411dcdad17c203499bab790.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorBeam.svg"
-dest_files=[ "res://.import/TractorBeam.svg-6fd31b3f9d313a14ee3a1c02d12c827e.s3tc.stex", "res://.import/TractorBeam.svg-6fd31b3f9d313a14ee3a1c02d12c827e.etc2.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Hull.svg"
+dest_files=[ "res://.import/Hull.svg-4b5eb4e43411dcdad17c203499bab790.s3tc.stex", "res://.import/Hull.svg-4b5eb4e43411dcdad17c203499bab790.etc2.stex" ]
 
 [params]
 

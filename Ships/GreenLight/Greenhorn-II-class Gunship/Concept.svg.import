@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/PlateLeft.svg-0f52af06e05ecac5e965eba6a66c8759.stex"
+path="res://.import/Concept.svg-c5991be530e58bd23acdd5a1e82413fb.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-II-class Gunship/PlateLeft.svg"
-dest_files=[ "res://.import/PlateLeft.svg-0f52af06e05ecac5e965eba6a66c8759.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-II-class Gunship/Concept.svg"
+dest_files=[ "res://.import/Concept.svg-c5991be530e58bd23acdd5a1e82413fb.stex" ]
 
 [params]
 

@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Drive.svg-a27d4630064ae77f06e849563f98abb0.s3tc.stex"
-path.etc2="res://.import/Drive.svg-a27d4630064ae77f06e849563f98abb0.etc2.stex"
+path.s3tc="res://.import/Drive.svg-b6b23f0693ae1eefa4a30d96c55ff2fa.s3tc.stex"
+path.etc2="res://.import/Drive.svg-b6b23f0693ae1eefa4a30d96c55ff2fa.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Drive.svg"
-dest_files=[ "res://.import/Drive.svg-a27d4630064ae77f06e849563f98abb0.s3tc.stex", "res://.import/Drive.svg-a27d4630064ae77f06e849563f98abb0.etc2.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Drive.svg"
+dest_files=[ "res://.import/Drive.svg-b6b23f0693ae1eefa4a30d96c55ff2fa.s3tc.stex", "res://.import/Drive.svg-b6b23f0693ae1eefa4a30d96c55ff2fa.etc2.stex" ]
 
 [params]
 

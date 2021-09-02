@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Hull.svg-8a32f4be52b0b5f6133394a658a4536c.stex"
+path="res://.import/Hull.svg-ede883528eafef8251660dd4ce6d4b69.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-II-class Gunship/Hull.svg"
-dest_files=[ "res://.import/Hull.svg-8a32f4be52b0b5f6133394a658a4536c.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg"
+dest_files=[ "res://.import/Hull.svg-ede883528eafef8251660dd4ce6d4b69.stex" ]
 
 [params]
 

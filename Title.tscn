@@ -2,7 +2,7 @@
 
 [ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tres" type="Theme" id=2]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Concept.svg" type="Texture" id=3]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept.svg" type="Texture" id=3]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg" type="Texture" id=4]
 [ext_resource path="res://TitleButton.gd" type="Script" id=5]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Drive.svg-a0786724b7e3a08b4283df2a62f0b9b6.stex"
+path="res://.import/Hack.svg-8ec8e05db774c9893d8c91f11e568456.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-II-class Gunship/Drive.svg"
-dest_files=[ "res://.import/Drive.svg-a0786724b7e3a08b4283df2a62f0b9b6.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hack.svg"
+dest_files=[ "res://.import/Hack.svg-8ec8e05db774c9893d8c91f11e568456.stex" ]
 
 [params]
 

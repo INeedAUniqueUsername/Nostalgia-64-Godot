@@ -1,9 +1,9 @@
 [gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Common/Lifetime.gd" type="Script" id=2]
-[ext_resource path="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/TractorWave.svg" type="Texture" id=3]
-[ext_resource path="res://Common/ParentArea.gd" type="Script" id=5]
-[ext_resource path="res://Common/Pull.gd" type="Script" id=6]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorWave.svg" type="Texture" id=1]
+[ext_resource path="res://Common/Pull.gd" type="Script" id=2]
+[ext_resource path="res://Common/Lifetime.gd" type="Script" id=3]
+[ext_resource path="res://Common/ParentArea.gd" type="Script" id=4]
 
 [sub_resource type="GDScript" id=1]
 script/source = "extends Sprite3D
@@ -31,12 +31,12 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 
 [node name="Lifetime" type="Node" parent="."]
-script = ExtResource( 2 )
+script = ExtResource( 3 )
 lifetime = 1.0
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 opacity = 0.4
-texture = ExtResource( 3 )
+texture = ExtResource( 1 )
 script = SubResource( 1 )
 lifetime = 1.0
 startOpacity = 0.4
@@ -44,12 +44,12 @@ startOpacity = 0.4
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false
 angular_damp = 1.0
-script = ExtResource( 5 )
+script = ExtResource( 4 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="Area"]
 depth = 0.1
 polygon = PoolVector2Array( 0.125638, 0.175804, -0.00492137, 0.175325, -0.118741, 0.00781107, 7.93785e-05, -0.170963, 0.133931, -0.167657, -0.00491756, 0.000268757 )
 
 [node name="Pull" type="Node" parent="."]
-script = ExtResource( 6 )
+script = ExtResource( 2 )
 strength = 2.0

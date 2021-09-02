@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/Cannon.svg-9fc758479717e58a0d8c25d79f0b8f61.s3tc.stex"
-path.etc2="res://.import/Cannon.svg-9fc758479717e58a0d8c25d79f0b8f61.etc2.stex"
+path.s3tc="res://.import/Cannon.svg-3ab25fddbb89f276fafe63aa15491aad.s3tc.stex"
+path.etc2="res://.import/Cannon.svg-3ab25fddbb89f276fafe63aa15491aad.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/Green Lancers/Greenhorn-class Heavy Gunship/Cannon.svg"
-dest_files=[ "res://.import/Cannon.svg-9fc758479717e58a0d8c25d79f0b8f61.s3tc.stex", "res://.import/Cannon.svg-9fc758479717e58a0d8c25d79f0b8f61.etc2.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Cannon.svg"
+dest_files=[ "res://.import/Cannon.svg-3ab25fddbb89f276fafe63aa15491aad.s3tc.stex", "res://.import/Cannon.svg-3ab25fddbb89f276fafe63aa15491aad.etc2.stex" ]
 
 [params]
 
