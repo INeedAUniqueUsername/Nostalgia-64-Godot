@@ -1,7 +1,7 @@
 # Nostalgia 64 (Godot)
 ![](Nostalgia64Preview.png)
 
-Nostalgia 64 is a physics-based spaceship fighting game. Take control of a heavy ship with three thrusters and three weapons, and avoid spinning out of control as you fight enemies in the harsh environment of the void.
+Nostalgia 64 is a physics-based spaceship fighting game. Take control of a heavy ship with three thrusters and three weapons, and avoid spinning out of control as you struggle against enemies in the cold, hard void.
 
 - Every part of your ship is a weapon
   - Your three thrusters fire damaging exhaust particles.
