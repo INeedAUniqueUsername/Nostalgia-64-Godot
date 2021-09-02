@@ -16,6 +16,7 @@ func _ready():
 
 func _process(delta):
 	if(Input.is_action_just_pressed(action)):
+		print("target: " + target.name)
 		target.onPressed()
 	elif(Input.is_action_just_released(action)):
 		target.onReleased()
