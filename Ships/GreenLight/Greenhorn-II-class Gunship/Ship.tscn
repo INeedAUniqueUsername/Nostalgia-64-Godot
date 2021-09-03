@@ -1,4 +1,4 @@
-[gd_scene load_steps=14 format=2]
+[gd_scene load_steps=13 format=2]
 
 [ext_resource path="res://Fire.gd" type="Script" id=1]
 [ext_resource path="res://HP.gd" type="Script" id=2]
@@ -7,9 +7,8 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hacker.svg" type="Texture" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateRight.svg" type="Texture" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg" type="Texture" id=7]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamRight.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamSpeed.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=10]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamLeft.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cannon.svg" type="Texture" id=12]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
@@ -45,7 +44,7 @@ linear_damp = 0.0
 
 [node name="FireLeft" type="Node" parent="CannonLeft"]
 script = ExtResource( 1 )
-projectile = ExtResource( 11 )
+projectile = ExtResource( 8 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 

@@ -24,6 +24,7 @@ script = ExtResource( 4 )
 conf = 1
 
 [node name="RightPlayer" parent="." instance=ExtResource( 3 )]
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, 5, 0, 0 )
 
 [node name="Controls" type="Node" parent="RightPlayer"]
 script = ExtResource( 4 )
@@ -34,6 +35,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 size = 5.4
 script = ExtResource( 2 )
 playerLeft = NodePath("../LeftPlayer")
+playerRight = NodePath("../RightPlayer")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )

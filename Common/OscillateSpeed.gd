@@ -10,23 +10,23 @@ func _ready():
 	turnRate = deg2rad(turnRateDegrees)
 	pass
 
-func speed(inc):
+func speed(delta):
 	var rb = get_parent()
 	var velocity = rb.linear_velocity;
 	#fix this
-	var velocityAngle = atan2(velocity.y, velocity.x)	#Conflicts with official documentation
+	var velocityAngle = atan2(velocity.y, velocity.x)
 	#print(velocityAngle)
 	var vec = Vector3(cos(velocityAngle) * angledSpeed, sin(velocityAngle) * angledSpeed, 0)
 	rb.apply_impulse(Vector3(0, 0, 0),
-		- angledSpeed * cos(velocityAngle) * vec
-		+ angledSpeed * cos(velocityAngle + inc) * vec)
+		- angledSpeed * sin(time / halfPeriod) * vec
+		+ angledSpeed * sin((time + delta)/halfPeriod) * vec)
 	pass
 
 func _process(delta):
 	
-	speed(-turnRate * delta)
+	speed(delta)
 		
 	time += delta
-	if(time >= halfPeriod):
+	if(time >= halfPeriod * 2):
 		time = 0
 	pass
