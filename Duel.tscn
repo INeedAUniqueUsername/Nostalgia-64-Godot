@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Greenhorn.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Ship.tscn" type="PackedScene" id=1]
 [ext_resource path="res://AutoZoom.gd" type="Script" id=2]
 [ext_resource path="res://Binding.gd" type="Script" id=3]
+[ext_resource path="res://BaseControls.gd" type="Script" id=4]
 
 [sub_resource type="Environment" id=1]
 background_mode = 1
@@ -53,37 +54,9 @@ action = "p2_left"
 [node name="LeftPlayer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 
-[node name="Controls" type="Node" parent="LeftPlayer"]
-
-[node name="FireLeft" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../CannonLeft/FireLeft")
-action = "p1_fire_left"
-
-[node name="FireSpecial" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../TractorCannon/FireSpecial")
-action = "p1_fire_special"
-
-[node name="FireRight" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../CannonRight/FireRight")
-action = "p1_fire_right"
-
-[node name="ThrustLeft" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustLeft")
-action = "p1_right"
-
-[node name="ThrustMiddle" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustMiddle")
-action = "p1_up"
-
-[node name="ThrustRight" type="Node" parent="LeftPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustRight")
-action = "p1_left"
+[node name="Node" type="Node" parent="LeftPlayer"]
+script = ExtResource( 4 )
+conf = 1
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )

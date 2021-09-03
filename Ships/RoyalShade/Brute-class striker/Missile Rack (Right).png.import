@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Bridge.png-96b9d0d7d346dae91b2249b8adab6c78.stex"
+path="res://.import/Missile Rack (Right).png-4770a4487ea3dd23440f8afbd223826e.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Brute-class striker/Bridge.png"
-dest_files=[ "res://.import/Bridge.png-96b9d0d7d346dae91b2249b8adab6c78.stex" ]
+source_file="res://Ships/RoyalShade/Brute-class striker/Missile Rack (Right).png"
+dest_files=[ "res://.import/Missile Rack (Right).png-4770a4487ea3dd23440f8afbd223826e.stex" ]
 
 [params]
 

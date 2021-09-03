@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/ShieldSegment.png-370e911aec849c5b32057e7fc2f5c2aa.stex"
+path="res://.import/Original.PNG-9095f72eba365779ffd7e8d02ae053d0.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Brute-class striker/ShieldSegment.png"
-dest_files=[ "res://.import/ShieldSegment.png-370e911aec849c5b32057e7fc2f5c2aa.stex" ]
+source_file="res://Ships/RoyalShade/Brute-class striker/Original.PNG"
+dest_files=[ "res://.import/Original.PNG-9095f72eba365779ffd7e8d02ae053d0.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Drive.png-3b9c7c00755e26a67145083ef4f02049.stex"
+path="res://.import/Drive.png-4aea150b93559fc4e1281d3bd7f9ce32.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Brute-class striker/Drive.png"
-dest_files=[ "res://.import/Drive.png-3b9c7c00755e26a67145083ef4f02049.stex" ]
+source_file="res://Ships/RoyalShade/Brute-class striker/Drive.png"
+dest_files=[ "res://.import/Drive.png-4aea150b93559fc4e1281d3bd7f9ce32.stex" ]
 
 [params]
 

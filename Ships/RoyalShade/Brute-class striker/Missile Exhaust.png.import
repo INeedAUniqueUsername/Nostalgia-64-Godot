@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Concept (Old).png-0a9e7eb6f8493bd8f94d8c93d7ba5c78.stex"
+path="res://.import/Missile Exhaust.png-8ce307c9decb4bb9cb63d34ef324a5ba.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Brute-class striker/Concept (Old).png"
-dest_files=[ "res://.import/Concept (Old).png-0a9e7eb6f8493bd8f94d8c93d7ba5c78.stex" ]
+source_file="res://Ships/RoyalShade/Brute-class striker/Missile Exhaust.png"
+dest_files=[ "res://.import/Missile Exhaust.png-8ce307c9decb4bb9cb63d34ef324a5ba.stex" ]
 
 [params]
 

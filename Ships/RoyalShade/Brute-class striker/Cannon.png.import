@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Concept.png-9c882e5473954882d5e8895fe72fc685.stex"
+path="res://.import/Cannon.png-e35806eb847ccbfc3e810a190b678ecc.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/Brute-class striker/Concept.png"
-dest_files=[ "res://.import/Concept.png-9c882e5473954882d5e8895fe72fc685.stex" ]
+source_file="res://Ships/RoyalShade/Brute-class striker/Cannon.png"
+dest_files=[ "res://.import/Cannon.png-e35806eb847ccbfc3e810a190b678ecc.stex" ]
 
 [params]
 
