@@ -1,0 +1,67 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://AutoZoom.gd" type="Script" id=1]
+[ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://Duel.gd" type="Script" id=3]
+
+[sub_resource type="Environment" id=1]
+background_mode = 1
+background_energy = 0.0
+ambient_light_energy = 0.0
+ambient_light_sky_contribution = 0.0
+fog_height_min = 0.0
+fog_height_max = 100.0
+ssao_quality = 0
+glow_bloom = 1.0
+adjustment_saturation = 0.2
+
+[sub_resource type="DynamicFont" id=2]
+size = 96
+outline_color = Color( 0, 1, 0.929412, 1 )
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=3]
+default_font = SubResource( 2 )
+
+[sub_resource type="DynamicFont" id=4]
+size = 64
+font_data = ExtResource( 2 )
+
+[sub_resource type="Theme" id=5]
+default_font = SubResource( 4 )
+
+[node name="World" type="Node"]
+
+[node name="Camera" type="Camera" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
+size = 5.4
+script = ExtResource( 1 )
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource( 1 )
+
+[node name="GameState" type="Node" parent="."]
+script = ExtResource( 3 )
+
+[node name="WinLabel" type="Label" parent="GameState"]
+margin_right = 1720.0
+margin_bottom = 246.0
+theme = SubResource( 3 )
+custom_colors/font_color = Color( 0, 1, 0.964706, 1 )
+text = "PLAYER 1 WINS"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Button" type="Button" parent="GameState"]
+margin_left = 680.0
+margin_top = 900.0
+margin_right = 1040.0
+margin_bottom = 990.0
+theme = SubResource( 5 )
+text = "New Game"
+__meta__ = {
+"_edit_use_anchors_": false
+}

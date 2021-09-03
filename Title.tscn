@@ -1,10 +1,11 @@
-[gd_scene load_steps=10 format=2]
+[gd_scene load_steps=11 format=2]
 
 [ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tres" type="Theme" id=2]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept.svg" type="Texture" id=3]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg" type="Texture" id=4]
-[ext_resource path="res://TitleButton.gd" type="Script" id=5]
+[ext_resource path="res://SceneButton.gd" type="Script" id=5]
+[ext_resource path="res://ShipSelect.tscn" type="PackedScene" id=6]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -29,14 +30,14 @@ __meta__ = {
 }
 
 [node name="Panel" type="Panel" parent="."]
-margin_right = 1920.0
+margin_right = 1720.0
 margin_bottom = 1080.0
 __meta__ = {
 "_edit_use_anchors_": false
 }
 
 [node name="Label" type="Label" parent="Panel"]
-margin_right = 1920.0
+margin_right = 1720.0
 margin_bottom = 320.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 1, 0.447059, 1 )
@@ -48,9 +49,9 @@ __meta__ = {
 }
 
 [node name="DuelMode" type="Button" parent="Panel"]
-margin_left = 750.0
+margin_left = 660.0
 margin_top = 750.0
-margin_right = 1150.0
+margin_right = 1060.0
 margin_bottom = 878.0
 theme = SubResource( 2 )
 text = "Duel Mode"
@@ -58,11 +59,12 @@ script = ExtResource( 5 )
 __meta__ = {
 "_edit_use_anchors_": false
 }
+nextScene = ExtResource( 6 )
 
 [node name="Panel" type="Panel" parent="Panel"]
-margin_left = 713.7
+margin_left = 600.0
 margin_top = 580.427
-margin_right = 773.7
+margin_right = 660.0
 margin_bottom = 621.427
 rect_rotation = -90.0
 rect_scale = Vector2( 2, 2 )
@@ -72,9 +74,9 @@ __meta__ = {
 }
 
 [node name="Panel2" type="Panel" parent="Panel"]
-margin_left = 1033.32
+margin_left = 960.0
 margin_top = 594.424
-margin_right = 1165.32
+margin_right = 1092.0
 margin_bottom = 707.424
 rect_rotation = -90.0
 rect_scale = Vector2( 2, 2 )

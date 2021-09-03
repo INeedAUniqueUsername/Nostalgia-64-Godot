@@ -4,7 +4,7 @@
 [ext_resource path="res://HP.gd" type="Script" id=2]
 [ext_resource path="res://Thrust.gd" type="Script" id=3]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Drive.svg" type="Texture" id=4]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hacker.svg" type="Texture" id=5]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cyberdeck.svg" type="Texture" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateRight.svg" type="Texture" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg" type="Texture" id=7]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleRight.tscn" type="PackedScene" id=8]
@@ -225,7 +225,7 @@ depth = 0.1
 polygon = PoolVector2Array( -0.0657206, -0.120978, 0.000191718, -0.119093, 0.179804, 0.118435, 0.116872, 0.116059, 0.0420395, 0.0216388, -0.192012, 0.0200922, -0.189518, -0.0335504, 0.00740382, -0.0297422 )
 
 [node name="Drive" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.361864, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39, 0, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -249,7 +249,7 @@ nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 params/bias = 0.1
 
-[node name="ThrustLeft" type="Node" parent="Drive"]
+[node name="ThrustRight" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
 accel = NodePath("../Source/Left")
@@ -265,7 +265,7 @@ thrustMultiplier = 40.0
 exhaustInterval = 0.1
 exhaust = ExtResource( 14 )
 
-[node name="ThrustRight" type="Node" parent="Drive"]
+[node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
 accel = NodePath("../Source/Right")
