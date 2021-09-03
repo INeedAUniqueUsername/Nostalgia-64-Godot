@@ -4,10 +4,10 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Hull.svg" type="Texture" id=2]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorCannon.svg" type="Texture" id=3]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Drive.svg" type="Texture" id=4]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamRight.tscn" type="PackedScene" id=5]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSpeed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Exhaust.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamLeft.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Impact.gd" type="Script" id=8]
 [ext_resource path="res://Thrust.gd" type="Script" id=9]
 [ext_resource path="res://HP.gd" type="Script" id=10]
 [ext_resource path="res://Fire.gd" type="Script" id=11]
@@ -24,6 +24,9 @@ angular_damp = 0.0
 [node name="HP" type="Node" parent="."]
 script = ExtResource( 10 )
 hp = 300
+
+[node name="Impact" type="Node" parent="."]
+script = ExtResource( 8 )
 
 [node name="CollisionPolygon2D" type="CollisionPolygon" parent="."]
 depth = 0.1
@@ -43,7 +46,7 @@ linear_damp = 0.0
 
 [node name="FireLeft" type="Node" parent="CannonLeft"]
 script = ExtResource( 11 )
-projectile = ExtResource( 8 )
+projectile = ExtResource( 5 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 

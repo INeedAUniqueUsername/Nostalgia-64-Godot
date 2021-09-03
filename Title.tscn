@@ -49,9 +49,9 @@ __meta__ = {
 
 [node name="DuelMode" type="Button" parent="Panel"]
 margin_left = 750.0
-margin_top = 800.0
+margin_top = 750.0
 margin_right = 1150.0
-margin_bottom = 928.0
+margin_bottom = 878.0
 theme = SubResource( 2 )
 text = "Duel Mode"
 script = ExtResource( 5 )

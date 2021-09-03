@@ -1,4 +1,4 @@
-[gd_scene load_steps=13 format=2]
+[gd_scene load_steps=15 format=2]
 
 [ext_resource path="res://Fire.gd" type="Script" id=1]
 [ext_resource path="res://HP.gd" type="Script" id=2]
@@ -7,8 +7,10 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hacker.svg" type="Texture" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateRight.svg" type="Texture" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg" type="Texture" id=7]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamSpeed.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleRight.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleLeft.tscn" type="PackedScene" id=9]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Jack.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Impact.gd" type="Script" id=11]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cannon.svg" type="Texture" id=12]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
@@ -25,6 +27,9 @@ angular_damp = 0.0
 [node name="HP" type="Node" parent="."]
 script = ExtResource( 2 )
 hp = 300
+
+[node name="Impact" type="Node" parent="."]
+script = ExtResource( 11 )
 
 [node name="CollisionPolygon2D2" type="CollisionPolygon" parent="."]
 depth = 0.1
@@ -44,7 +49,7 @@ linear_damp = 0.0
 
 [node name="FireLeft" type="Node" parent="CannonLeft"]
 script = ExtResource( 1 )
-projectile = ExtResource( 8 )
+projectile = ExtResource( 9 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 
@@ -77,7 +82,7 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireSpecial" type="Node" parent="Cyberdeck"]
+[node name="FireMiddle" type="Node" parent="Cyberdeck"]
 script = ExtResource( 1 )
 projectile = ExtResource( 10 )
 fireCooldown = 0.8
@@ -140,8 +145,16 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0, 0 )
 [node name="Velocity" type="Spatial" parent="CannonRight/Beam"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
-[node name="ArmorFrontLeft" type="Spatial" parent="."]
+[node name="ArmorFrontLeft" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285, 0.25, 0 )
+mass = 0.1
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+__meta__ = {
+"_editor_description_": ""
+}
 
 [node name="HP" type="Node" parent="ArmorFrontLeft"]
 script = ExtResource( 2 )
@@ -154,8 +167,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00649452, 0.0193551, -0.002
 depth = 0.1
 polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
 
-[node name="ArmorFrontRight" type="Spatial" parent="."]
+[node name="ArmorFrontRight" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285, -0.25, 0 )
+mass = 0.1
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorFrontRight"]
 script = ExtResource( 2 )
@@ -168,8 +186,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.001 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0657206, -0.120978, 0.000191718, -0.119093, 0.179804, 0.118435, 0.116872, 0.116059, 0.0420395, 0.0216388, -0.192012, 0.0200922, -0.189518, -0.0335504, 0.00740382, -0.0297422 )
 
-[node name="ArmorBackLeft" type="Spatial" parent="."]
+[node name="ArmorBackLeft" type="RigidBody" parent="."]
 transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29, 0.45, 0 )
+mass = 0.1
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorBackLeft"]
 script = ExtResource( 2 )
@@ -182,8 +205,13 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00649452, 0.0193551, -0.002
 depth = 0.1
 polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
 
-[node name="ArmorBackRight" type="Spatial" parent="."]
+[node name="ArmorBackRight" type="RigidBody" parent="."]
 transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29, -0.45, 0 )
+mass = 0.1
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorBackRight"]
 script = ExtResource( 2 )
@@ -224,7 +252,7 @@ params/bias = 0.1
 [node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Right")
+accel = NodePath("../Source/Left")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
 exhaust = ExtResource( 14 )
@@ -240,7 +268,7 @@ exhaust = ExtResource( 14 )
 [node name="ThrustRight" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Left")
+accel = NodePath("../Source/Right")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
 exhaust = ExtResource( 14 )
@@ -256,5 +284,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
 [node name="Right" type="Position3D" parent="Drive/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, 0 )
-
-[node name="Spatial" type="Spatial" parent="."]

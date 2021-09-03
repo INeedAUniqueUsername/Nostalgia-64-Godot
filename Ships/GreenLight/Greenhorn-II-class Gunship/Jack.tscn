@@ -1,0 +1,33 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Seek.gd" type="Script" id=2]
+[ext_resource path="res://Common/Lifetime.gd" type="Script" id=3]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hack.svg" type="Texture" id=4]
+[ext_resource path="res://Common/BasicProjectile.gd" type="Script" id=5]
+
+[sub_resource type="SphereShape" id=1]
+radius = 4.0
+
+[node name="Spatial" type="RigidBody"]
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+texture = ExtResource( 4 )
+
+[node name="Lifetime" type="Node" parent="."]
+script = ExtResource( 3 )
+lifetime = 60.0
+
+[node name="Seek" type="Node" parent="."]
+script = ExtResource( 2 )
+
+[node name="SeekRange" type="Area" parent="."]
+
+[node name="Sphere" type="CollisionShape" parent="SeekRange"]
+shape = SubResource( 1 )
+
+[node name="Projectile" type="Node" parent="."]
+script = ExtResource( 5 )
