@@ -2,7 +2,7 @@
 
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Ship.tscn" type="PackedScene" id=1]
 [ext_resource path="res://AutoZoom.gd" type="Script" id=2]
-[ext_resource path="res://Binding.gd" type="Script" id=3]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Ship.tscn" type="PackedScene" id=3]
 [ext_resource path="res://BaseControls.gd" type="Script" id=4]
 
 [sub_resource type="Environment" id=1]
@@ -16,54 +16,24 @@ ssao_quality = 0
 
 [node name="World" type="Node"]
 
-[node name="RightPlayer" parent="." instance=ExtResource( 1 )]
-transform = Transform( -1, 8.74228e-08, 0, -8.74228e-08, -1, 0, 0, 0, 1, 5, 0, 0 )
-
-[node name="Controls" type="Node" parent="RightPlayer"]
-
-[node name="FireLeft" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../CannonLeft/FireLeft")
-action = "p2_fire_left"
-
-[node name="FireSpecial" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../TractorCannon/FireSpecial")
-action = "p2_fire_special"
-
-[node name="FireRight" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../CannonRight/FireRight")
-action = "p2_fire_right"
-
-[node name="ThrustLeft" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustLeft")
-action = "p2_right"
-
-[node name="ThrustMiddle" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustMiddle")
-action = "p2_up"
-
-[node name="ThrustRight" type="Node" parent="RightPlayer/Controls"]
-script = ExtResource( 3 )
-target = NodePath("../../Drive/ThrustRight")
-action = "p2_left"
-
 [node name="LeftPlayer" parent="." instance=ExtResource( 1 )]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -5, 0, 0 )
 
-[node name="Node" type="Node" parent="LeftPlayer"]
+[node name="Controls" type="Node" parent="LeftPlayer"]
 script = ExtResource( 4 )
 conf = 1
+
+[node name="RightPlayer" parent="." instance=ExtResource( 3 )]
+
+[node name="Controls" type="Node" parent="RightPlayer"]
+script = ExtResource( 4 )
+conf = 2
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )
 size = 5.4
 script = ExtResource( 2 )
 playerLeft = NodePath("../LeftPlayer")
-playerRight = NodePath("../RightPlayer")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource( 1 )

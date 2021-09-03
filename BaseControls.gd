@@ -23,17 +23,17 @@ func _ready():
 		for node in child.get_children():
 			var n = node.name;
 			if(n == "FireLeft"):
-				fireLeft = n;
+				fireLeft = node;
 			if(n == "FireRight"):
-				fireRight = n;
+				fireRight = node;
 			if(n == "FireMiddle"):
-				fireMiddle = n;
+				fireMiddle = node;
 			if(n == "ThrustLeft"):
-				thrustLeft = n;
+				thrustLeft = node;
 			if(n == "ThrustRight"):
-				thrustRight = n;
+				thrustRight = node;
 			if(n == "ThrustMiddle"):
-				thrustMiddle = n;
+				thrustMiddle = node;
 func _process(delta):
 	if(conf == Config.ui):
 		controls("ui")
@@ -45,7 +45,7 @@ func _process(delta):
 func controls(prefix):
 	check(prefix + "_left", thrustLeft)
 	check(prefix + "_right", thrustRight)
-	check(prefix + "_middle", thrustMiddle)
+	check(prefix + "_up", thrustMiddle)
 	check(prefix + "_fire_left", fireLeft)
 	check(prefix + "_fire_right", fireRight)
 	check(prefix + "_fire_middle", fireMiddle)

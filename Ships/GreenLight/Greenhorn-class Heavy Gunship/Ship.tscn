@@ -59,12 +59,9 @@ texture = ExtResource( 1 )
 depth = 0.1
 polygon = PoolVector2Array( 0.20422, 0.0169007, 0.203416, -0.0148623, 0.0790881, -0.0138853, 0.0725825, -0.0337917, -0.189766, -0.0319612, -0.188818, 0.0357852, 0.0773178, 0.038849, 0.0780624, 0.0166673 )
 
-[node name="HingeJoint" type="HingeJoint" parent="CannonLeft"]
+[node name="Pin" type="PinJoint" parent="CannonLeft"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/enable = true
-angular_limit/upper = 0.0
-angular_limit/lower = 0.0
 
 [node name="Beam" type="Spatial" parent="CannonLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0.00349635, 0 )
@@ -81,7 +78,7 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireSpecial" type="Node" parent="TractorCannon"]
+[node name="FireMiddle" type="Node" parent="TractorCannon"]
 script = ExtResource( 11 )
 projectile = ExtResource( 7 )
 fireCooldown = 0.8
@@ -98,12 +95,9 @@ texture = ExtResource( 3 )
 depth = 0.1
 polygon = PoolVector2Array( 0.143311, 0.00140834, 0.109746, -0.0649589, 0.0347323, -0.0575848, -0.0177576, -0.0979137, -0.128929, -0.142005, -0.134778, 0.14214, -0.0257595, 0.103945, 0.041571, 0.0522588, 0.113655, 0.0623041 )
 
-[node name="HingeJoint" type="HingeJoint" parent="TractorCannon"]
+[node name="Pin" type="PinJoint" parent="TractorCannon"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/enable = true
-angular_limit/upper = 0.0
-angular_limit/lower = 0.0
 
 [node name="Beam" type="Spatial" parent="TractorCannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
@@ -138,12 +132,9 @@ texture = ExtResource( 1 )
 depth = 0.1
 polygon = PoolVector2Array( 0.20422, 0.0169007, 0.203416, -0.0148623, 0.0790881, -0.0138853, 0.0725825, -0.0337917, -0.189766, -0.0319612, -0.188818, 0.0357852, 0.0773178, 0.038849, 0.0780624, 0.0166673 )
 
-[node name="HingeJoint" type="HingeJoint" parent="CannonRight"]
+[node name="Pin" type="PinJoint" parent="CannonRight"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/enable = true
-angular_limit/upper = 0.0
-angular_limit/lower = 0.0
 
 [node name="Beam" type="Spatial" parent="CannonRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0, 0 )
@@ -179,7 +170,7 @@ params/bias = 0.1
 [node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 9 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Left")
+accel = NodePath("../Source/Right")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
 exhaust = ExtResource( 6 )
@@ -195,7 +186,7 @@ exhaust = ExtResource( 6 )
 [node name="ThrustRight" type="Node" parent="Drive"]
 script = ExtResource( 9 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Right")
+accel = NodePath("../Source/Left")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
 exhaust = ExtResource( 6 )

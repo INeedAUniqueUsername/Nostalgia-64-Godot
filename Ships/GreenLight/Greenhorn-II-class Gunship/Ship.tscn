@@ -8,11 +8,11 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateRight.svg" type="Texture" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg" type="Texture" id=7]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamRight.tscn" type="PackedScene" id=8]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Exhaust.tscn" type="PackedScene" id=9]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamLeft.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cannon.svg" type="Texture" id=12]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
 
 [node name="Hull" type="RigidBody"]
 mass = 100.0
@@ -225,10 +225,10 @@ params/bias = 0.1
 [node name="ThrustLeft" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Left")
+accel = NodePath("../Source/Right")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
-exhaust = ExtResource( 9 )
+exhaust = ExtResource( 14 )
 
 [node name="ThrustMiddle" type="Node" parent="Drive"]
 script = ExtResource( 3 )
@@ -236,15 +236,15 @@ pos = NodePath("../Source")
 accel = NodePath("../Source/Middle")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
-exhaust = ExtResource( 9 )
+exhaust = ExtResource( 14 )
 
 [node name="ThrustRight" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
-accel = NodePath("../Source/Right")
+accel = NodePath("../Source/Left")
 thrustMultiplier = 40.0
 exhaustInterval = 0.1
-exhaust = ExtResource( 9 )
+exhaust = ExtResource( 14 )
 
 [node name="Source" type="Position3D" parent="Drive"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.183338, 0, 0 )

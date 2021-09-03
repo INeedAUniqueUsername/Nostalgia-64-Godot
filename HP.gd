@@ -6,3 +6,5 @@ func damage(deltaHp):
 	hp -= deltaHp;
 	if(hp < 1):
 		get_parent().queue_free()
+
+
