@@ -9,14 +9,14 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Hull.svg" type="Texture" id=7]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleRight.tscn" type="PackedScene" id=8]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleLeft.tscn" type="PackedScene" id=9]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Jack.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamSuper.tscn" type="PackedScene" id=10]
 [ext_resource path="res://Impact.gd" type="Script" id=11]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cannon.svg" type="Texture" id=12]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
 
 [node name="Hull" type="RigidBody"]
-mass = 100.0
+mass = 60.0
 gravity_scale = 0.0
 axis_lock_linear_z = true
 axis_lock_angular_x = true
@@ -74,7 +74,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0.00349635, 0 )
 [node name="Velocity" type="Spatial" parent="CannonLeft/Beam"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
-[node name="Cyberdeck" type="RigidBody" parent="."]
+[node name="BeamSuper" type="RigidBody" parent="."]
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -82,32 +82,31 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireMiddle" type="Node" parent="Cyberdeck"]
+[node name="FireMiddle" type="Node" parent="BeamSuper"]
 script = ExtResource( 1 )
 projectile = ExtResource( 10 )
-fireCooldown = 0.8
+fireCooldown = 3.0
 position = NodePath("../Beam")
 
-[node name="HP" type="Node" parent="Cyberdeck"]
+[node name="HP" type="Node" parent="BeamSuper"]
 script = ExtResource( 2 )
 hp = 60
 
-[node name="Sprite" type="Sprite3D" parent="Cyberdeck"]
+[node name="Sprite" type="Sprite3D" parent="BeamSuper"]
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="Cyberdeck"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="BeamSuper"]
 depth = 0.1
 polygon = PoolVector2Array( 0.135019, 0.00767557, 0.0623625, -0.102619, 0.0087777, -0.101067, 0.00779432, -0.0253379, -0.0108223, -0.0242069, -0.00900987, -0.101302, -0.0643019, -0.100866, -0.0606069, -0.0233101, -0.112556, -0.0238101, -0.111883, 0.0336495, -0.0575366, 0.0329302, -0.0594609, 0.113773, -0.010572, 0.114244, -0.0112546, 0.0335578, 0.00927, 0.032867, 0.0124957, 0.114633, 0.0532545, 0.114139 )
 
-[node name="Pin" type="PinJoint" parent="Cyberdeck"]
+[node name="Pin" type="PinJoint" parent="BeamSuper"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 
-[node name="Beam" type="Spatial" parent="Cyberdeck"]
+[node name="Beam" type="Spatial" parent="BeamSuper"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
 
-[node name="Velocity" type="Spatial" parent="Cyberdeck/Beam"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+[node name="Velocity" type="Spatial" parent="BeamSuper/Beam"]
 
 [node name="CannonRight" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.45, 0 )

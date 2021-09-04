@@ -7,7 +7,7 @@
 [ext_resource path="res://Common/ParentArea.gd" type="Script" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSuper.svg" type="Texture" id=6]
 [ext_resource path="res://Fragment.gd" type="Script" id=7]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSpeed.tscn" type="PackedScene" id=8]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/BeamAngleLeft.tscn" type="PackedScene" id=8]
 
 [node name="Beam" type="RigidBody"]
 gravity_scale = 0.0
@@ -27,7 +27,7 @@ texture = ExtResource( 6 )
 
 [node name="Lifetime" type="Node" parent="."]
 script = ExtResource( 4 )
-lifetime = 0.25
+lifetime = 1.0
 
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false
@@ -49,4 +49,4 @@ script = ExtResource( 7 )
 fragment = ExtResource( 8 )
 count = 20
 angle = 9.0
-speed = 10.0
+speed = 5.0
