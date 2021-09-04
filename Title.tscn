@@ -1,4 +1,4 @@
-[gd_scene load_steps=11 format=2]
+[gd_scene load_steps=12 format=2]
 
 [ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tres" type="Theme" id=2]
@@ -6,6 +6,7 @@
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg" type="Texture" id=4]
 [ext_resource path="res://SceneButton.gd" type="Script" id=5]
 [ext_resource path="res://ShipSelect.tscn" type="PackedScene" id=6]
+[ext_resource path="res://ShipDesc.tres" type="Theme" id=7]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -42,6 +43,18 @@ margin_bottom = 320.0
 theme = ExtResource( 2 )
 custom_colors/font_color = Color( 0, 1, 0.447059, 1 )
 text = "Nostalgia 64"
+align = 1
+valign = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="Panel"]
+margin_right = 1720.0
+margin_bottom = 88.0
+theme = ExtResource( 7 )
+custom_colors/font_color = Color( 0, 1, 0.447059, 1 )
+text = "INeedAUniqueUsername presents..."
 align = 1
 valign = 1
 __meta__ = {

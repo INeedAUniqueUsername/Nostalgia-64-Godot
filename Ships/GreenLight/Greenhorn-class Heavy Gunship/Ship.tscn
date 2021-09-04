@@ -36,7 +36,7 @@ polygon = PoolVector2Array( 0.00396932, -0.212267, 0.00404694, -0.119572, -0.046
 texture = ExtResource( 2 )
 
 [node name="CannonLeft" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, 0.4, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0993372, 0.4, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -109,7 +109,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
 
 [node name="CannonRight" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.15, -0.4, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0993372, -0.4, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true

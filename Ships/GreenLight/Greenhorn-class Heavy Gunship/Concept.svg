@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="132"
    height="113"
    viewBox="0 0 34.925004 29.89791"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Concept.svg"
-   inkscape:export-filename="C:\Users\Alex\Documents\Nostalgia 64\Sprites\Green Lancers\Greenhorn-class Heavy Gunship\Concept.png"
+   inkscape:export-filename="C:\Users\alexm\source\repos\Nostalgia-64-Godot\Icon.png"
    inkscape:export-xdpi="96"
-   inkscape:export-ydpi="96">
+   inkscape:export-ydpi="96"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="3.959798"
-     inkscape:cx="41.68262"
-     inkscape:cy="64.141415"
+     inkscape:zoom="5.6"
+     inkscape:cx="68.214285"
+     inkscape:cy="51.428571"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -38,11 +38,11 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1317"
-     inkscape:window-height="1041"
-     inkscape:window-x="593"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1566"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
      units="px"
      inkscape:pagecheckerboard="true">
     <inkscape:grid
@@ -60,7 +60,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -121,24 +120,24 @@
          style="fill:none;stroke:#00cc00;stroke-width:0.5291667;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-dasharray:none;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(-7.4083327,-12.699987)"
+       transform="matrix(1.5,0,0,1.5,-80.418203,-104.71334)"
        id="layer1-9"
        inkscape:label="Layer 1">
       <path
          inkscape:connector-curvature="0"
          id="path843"
          d="m 140.72807,183.10067 h 7.14375 v 0.52917 h 3.43959 v 0.79375 h -3.43959 v 0.52916 h -7.14375 z"
-         style="fill:none;stroke:#00cc00;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#00cc00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
-       transform="translate(-7.4083327,9.2604263)"
+       transform="matrix(1.5,0,0,1.5,-80.418203,-82.752929)"
        id="layer1-9-1"
        inkscape:label="Layer 1">
       <path
          inkscape:connector-curvature="0"
          id="path843-8"
          d="m 140.72807,183.10067 h 7.14375 v 0.52917 h 3.43959 v 0.79375 h -3.43959 v 0.52916 h -7.14375 z"
-         style="fill:none;stroke:#00cc00;stroke-width:0.26458332px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         style="fill:none;stroke:#00cc00;stroke-width:0.264583px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
        transform="translate(-20.637509,-1.3228937)"
