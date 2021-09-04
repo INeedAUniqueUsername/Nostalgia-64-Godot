@@ -1,0 +1,12 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Common/SpriteFadeBox.gd" type="Script" id=1]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSuper.svg" type="Texture" id=2]
+
+[node name="Emitter" type="Spatial"]
+script = ExtResource( 1 )
+texture = ExtResource( 2 )
+particleLifetime = 0.5
+apothem = 0.05
+interval = 0.008
+emitTime = 0.75

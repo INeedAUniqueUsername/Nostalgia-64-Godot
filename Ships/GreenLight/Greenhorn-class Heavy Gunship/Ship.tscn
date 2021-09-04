@@ -6,7 +6,7 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Drive.svg" type="Texture" id=4]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSpeed.tscn" type="PackedScene" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Exhaust.tscn" type="PackedScene" id=6]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/TractorBeam.tscn" type="PackedScene" id=7]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/BeamSuper.tscn" type="PackedScene" id=7]
 [ext_resource path="res://Impact.gd" type="Script" id=8]
 [ext_resource path="res://Thrust.gd" type="Script" id=9]
 [ext_resource path="res://HP.gd" type="Script" id=10]
@@ -72,7 +72,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0.00349635, 0 )
 [node name="Velocity" type="Spatial" parent="CannonLeft/Beam"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
-[node name="TractorCannon" type="RigidBody" parent="."]
+[node name="SuperCannon" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.259335, 0, 0 )
 mass = 0.1
 gravity_scale = 0.0
@@ -81,32 +81,32 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireMiddle" type="Node" parent="TractorCannon"]
+[node name="FireMiddle" type="Node" parent="SuperCannon"]
 script = ExtResource( 11 )
 projectile = ExtResource( 7 )
-fireCooldown = 0.8
+fireCooldown = 1.5
 position = NodePath("../Beam")
 
-[node name="HP" type="Node" parent="TractorCannon"]
+[node name="HP" type="Node" parent="SuperCannon"]
 script = ExtResource( 10 )
 hp = 60
 
-[node name="Sprite" type="Sprite3D" parent="TractorCannon"]
+[node name="Sprite" type="Sprite3D" parent="SuperCannon"]
 texture = ExtResource( 3 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon" parent="TractorCannon"]
+[node name="CollisionPolygon2D" type="CollisionPolygon" parent="SuperCannon"]
 depth = 0.1
 polygon = PoolVector2Array( 0.143311, 0.00140834, 0.109746, -0.0649589, 0.0347323, -0.0575848, -0.0177576, -0.0979137, -0.128929, -0.142005, -0.134778, 0.14214, -0.0257595, 0.103945, 0.041571, 0.0522588, 0.113655, 0.0623041 )
 
-[node name="Pin" type="PinJoint" parent="TractorCannon"]
+[node name="Pin" type="PinJoint" parent="SuperCannon"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 
-[node name="Beam" type="Spatial" parent="TractorCannon"]
+[node name="Beam" type="Spatial" parent="SuperCannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
 
-[node name="Velocity" type="Spatial" parent="TractorCannon/Beam"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 10, 0, 0 )
+[node name="Velocity" type="Spatial" parent="SuperCannon/Beam"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
 
 [node name="CannonRight" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0993372, -0.4, 0 )
