@@ -39,8 +39,12 @@ func init():
 				thrustMiddle = node;
 				
 	for f in [fireLeft, fireMiddle, fireRight]:
+		if(f == null):
+			continue
 		f.connect("tree_exited", self, "updateCanFire")
 	for t in [thrustLeft, thrustMiddle, thrustRight]:
+		if(t == null):
+			continue
 		t.connect("tree_exited", self, "updateCanThrust")
 func _ready():
 	init()

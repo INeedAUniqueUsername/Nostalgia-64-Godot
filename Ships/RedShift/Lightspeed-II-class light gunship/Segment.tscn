@@ -1,0 +1,23 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/HexShieldSegment.svg" type="Texture" id=2]
+[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/ShieldSegment.gd" type="Script" id=3]
+
+[node name="Beam" type="RigidBody"]
+gravity_scale = 0.0
+continuous_cd = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+
+[node name="Sprite" type="Sprite3D" parent="."]
+pixel_size = 0.015
+texture = ExtResource( 2 )
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
+depth = 0.1
+polygon = PoolVector2Array( -0.0539336, 0.179651, 0.0494961, 0.241286, 0.0532455, -0.253309, -0.059352, -0.188824 )
+
+[node name="HP" type="Node" parent="."]
+script = ExtResource( 3 )
+maxHp = 30.0

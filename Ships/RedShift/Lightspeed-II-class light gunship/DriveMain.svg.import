@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/HexShieldSegment.svg-6470d2196ac91e3f51632f67da392e9f.s3tc.stex"
-path.etc2="res://.import/HexShieldSegment.svg-6470d2196ac91e3f51632f67da392e9f.etc2.stex"
+path.s3tc="res://.import/DriveMain.svg-deab020d16247bc6df1d715a89604787.s3tc.stex"
+path.etc2="res://.import/DriveMain.svg-deab020d16247bc6df1d715a89604787.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/RedShift/Lightspeed-II-class light gunship/HexShieldSegment.svg"
-dest_files=[ "res://.import/HexShieldSegment.svg-6470d2196ac91e3f51632f67da392e9f.s3tc.stex", "res://.import/HexShieldSegment.svg-6470d2196ac91e3f51632f67da392e9f.etc2.stex" ]
+source_file="res://Ships/RedShift/Lightspeed-II-class light gunship/DriveMain.svg"
+dest_files=[ "res://.import/DriveMain.svg-deab020d16247bc6df1d715a89604787.s3tc.stex", "res://.import/DriveMain.svg-deab020d16247bc6df1d715a89604787.etc2.stex" ]
 
 [params]
 
