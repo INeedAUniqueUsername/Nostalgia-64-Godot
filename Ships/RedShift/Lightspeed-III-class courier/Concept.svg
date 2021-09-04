@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    width="60"
    height="41"
    viewBox="0 0 14.287499 9.763125"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Concept.svg"
    inkscape:export-filename="C:\Users\Alex\Documents\Nostalgia 64\Sprites\Courier III\Concept.png"
    inkscape:export-xdpi="192"
-   inkscape:export-ydpi="192">
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,21 +28,21 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="11.313709"
-     inkscape:cx="22.330338"
-     inkscape:cy="22.806673"
+     inkscape:zoom="22.627418"
+     inkscape:cx="21.500465"
+     inkscape:cy="25.897785"
      inkscape:document-units="mm"
-     inkscape:current-layer="layer1"
+     inkscape:current-layer="layer1-3-1"
      showgrid="false"
      fit-margin-top="0"
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1427"
-     inkscape:window-height="1041"
-     inkscape:window-x="483"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1566"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
      units="px"
      inkscape:pagecheckerboard="true">
     <inkscape:grid
@@ -60,7 +60,7 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title></dc:title>
+        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -122,6 +122,17 @@
          style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
     <g
+       transform="translate(5.4913127,6.513558)"
+       id="layer1-3-1"
+       inkscape:label="Layer 1">
+      <path
+         inkscape:connector-curvature="0"
+         id="path836-5"
+         d="m 110.55238,162.43271 0.9525,0.47625 v 1.905 l -0.9525,0.47625 v -0.9525 l -1.905,0.9525 v -2.8575 l 1.905,0.9525 z"
+         style="fill:none;fill-opacity:1;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="ccccccccc" />
+    </g>
+    <g
        transform="translate(-2.3812468,5.7742297)"
        id="layer1-2"
        inkscape:label="Layer 1">
@@ -130,14 +141,15 @@
          inkscape:export-xdpi="192"
          inkscape:connector-curvature="0"
          id="path825-5"
-         d="m 110.55237,162.90895 3.09562,1.66688 -3.09562,1.66687 z"
-         style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+         d="m 110.55237,162.4327 2.61937,1.19063 v 0.47625 h -1.905 v 0.9525 h 1.905 v 0.47625 l -2.61937,1.19062 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="cccccsccc" />
       <path
          inkscape:export-ydpi="192"
          inkscape:export-xdpi="192"
          inkscape:connector-curvature="0"
          id="path827"
-         d="m 110.55237,163.14707 h -0.47625 l -0.47625,0.23813 -0.47625,0.47625 -0.23812,0.47625 v 0.47625 l 0.23812,0.47625 0.47625,0.47625 0.47625,0.23812 h 0.47625"
+         d="m 110.44074,163.19345 h -0.47625 l -0.47625,0.23813 -0.47625,0.47625 -0.23812,0.47625 v 0.47625 l 0.23812,0.47625 0.47625,0.47625 0.47625,0.23812 h 0.47625"
          style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
     </g>
   </g>

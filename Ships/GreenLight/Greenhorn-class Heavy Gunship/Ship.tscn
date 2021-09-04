@@ -47,7 +47,7 @@ linear_damp = 0.0
 [node name="FireLeft" type="Node" parent="CannonLeft"]
 script = ExtResource( 11 )
 projectile = ExtResource( 5 )
-fireCooldown = 0.5
+fireCooldown = 0.3
 position = NodePath("../Beam")
 
 [node name="HP" type="Node" parent="CannonLeft"]
@@ -120,7 +120,7 @@ linear_damp = 0.0
 [node name="FireRight" type="Node" parent="CannonRight"]
 script = ExtResource( 11 )
 projectile = ExtResource( 5 )
-fireCooldown = 0.5
+fireCooldown = 0.3
 position = NodePath("../Beam")
 
 [node name="HP" type="Node" parent="CannonRight"]

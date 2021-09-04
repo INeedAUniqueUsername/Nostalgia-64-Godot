@@ -2,23 +2,23 @@
 <!-- Created with Inkscape (http://www.inkscape.org/) -->
 
 <svg
-   xmlns:dc="http://purl.org/dc/elements/1.1/"
-   xmlns:cc="http://creativecommons.org/ns#"
-   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
-   xmlns:svg="http://www.w3.org/2000/svg"
-   xmlns="http://www.w3.org/2000/svg"
-   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
-   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
-   width="22"
-   height="16"
-   viewBox="0 0 5.2387498 3.8099999"
+   width="19.468746"
+   height="19.553005"
+   viewBox="0 0 4.635995 4.6560592"
    version="1.1"
    id="svg8"
-   inkscape:version="0.92.2 (5c3e80d, 2017-08-06)"
+   inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Turret.svg"
    inkscape:export-filename="C:\Users\Alex\Documents\Nostalgia 64\Sprites\Courier III\Cannon.png"
    inkscape:export-xdpi="192"
-   inkscape:export-ydpi="192">
+   inkscape:export-ydpi="192"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:dc="http://purl.org/dc/elements/1.1/">
   <defs
      id="defs2" />
   <sodipodi:namedview
@@ -28,9 +28,9 @@
      borderopacity="1.0"
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
-     inkscape:zoom="45.254834"
-     inkscape:cx="5.3443479"
-     inkscape:cy="7.5332907"
+     inkscape:zoom="32"
+     inkscape:cx="5.9375"
+     inkscape:cy="5.25"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1"
      showgrid="true"
@@ -38,19 +38,19 @@
      fit-margin-left="0"
      fit-margin-right="0"
      fit-margin-bottom="0"
-     inkscape:window-width="1427"
-     inkscape:window-height="1041"
-     inkscape:window-x="483"
-     inkscape:window-y="0"
-     inkscape:window-maximized="0"
+     inkscape:window-width="2560"
+     inkscape:window-height="1566"
+     inkscape:window-x="-11"
+     inkscape:window-y="-11"
+     inkscape:window-maximized="1"
      units="px"
      inkscape:pagecheckerboard="true">
     <inkscape:grid
        type="xygrid"
        id="grid837"
        empspacing="4"
-       originx="1.3096856"
-       originy="1.1518331" />
+       originx="1.1831848"
+       originy="1.9561083" />
   </sodipodi:namedview>
   <metadata
      id="metadata5">
@@ -60,7 +60,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>
@@ -68,20 +67,26 @@
      inkscape:label="Layer 1"
      inkscape:groupmode="layer"
      id="layer1"
-     transform="translate(-108.76644,-162.63203)">
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 110.55237,162.90895 3.09562,1.66688 -3.09562,1.66687 z"
-       id="path825"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="192"
-       inkscape:export-ydpi="192" />
-    <path
-       style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
-       d="m 110.55237,163.14707 h -0.47625 l -0.47625,0.23813 -0.47625,0.47625 -0.23812,0.47625 v 0.47625 l 0.23812,0.47625 0.47625,0.47625 0.47625,0.23812 h 0.47625"
-       id="path827"
-       inkscape:connector-curvature="0"
-       inkscape:export-xdpi="192"
-       inkscape:export-ydpi="192" />
+     transform="translate(-108.89294,-161.82775)">
+    <g
+       transform="translate(0.2381333,-0.4200402)"
+       id="layer1-2"
+       inkscape:label="Layer 1">
+      <path
+         inkscape:export-ydpi="192"
+         inkscape:export-xdpi="192"
+         inkscape:connector-curvature="0"
+         id="path825-5"
+         d="m 110.55237,162.4327 2.61937,1.19063 v 0.47625 h -1.905 v 0.9525 h 1.905 v 0.47625 l -2.61937,1.19062 z"
+         style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+         sodipodi:nodetypes="cccccsccc" />
+      <path
+         inkscape:export-ydpi="192"
+         inkscape:export-xdpi="192"
+         inkscape:connector-curvature="0"
+         id="path827"
+         d="m 110.44074,163.19345 h -0.47625 l -0.47625,0.23813 -0.47625,0.47625 -0.23812,0.47625 v 0.47625 l 0.23812,0.47625 0.47625,0.47625 0.47625,0.23812 h 0.47625"
+         style="fill:none;stroke:#ffffff;stroke-width:0.238125px;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1" />
+    </g>
   </g>
 </svg>

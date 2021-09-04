@@ -158,6 +158,7 @@ __meta__ = {
 
 [node name="HP" type="Node" parent="ArmorFrontLeft"]
 script = ExtResource( 2 )
+hp = 90
 
 [node name="Sprite" type="Sprite3D" parent="ArmorFrontLeft"]
 texture = ExtResource( 13 )
@@ -177,6 +178,7 @@ axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorFrontRight"]
 script = ExtResource( 2 )
+hp = 90
 
 [node name="Sprite3D" type="Sprite3D" parent="ArmorFrontRight"]
 texture = ExtResource( 6 )
@@ -196,6 +198,7 @@ axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorBackLeft"]
 script = ExtResource( 2 )
+hp = 90
 
 [node name="Sprite" type="Sprite3D" parent="ArmorBackLeft"]
 texture = ExtResource( 13 )
@@ -215,6 +218,7 @@ axis_lock_angular_y = true
 
 [node name="HP" type="Node" parent="ArmorBackRight"]
 script = ExtResource( 2 )
+hp = 90
 
 [node name="Sprite3D" type="Sprite3D" parent="ArmorBackRight"]
 texture = ExtResource( 6 )

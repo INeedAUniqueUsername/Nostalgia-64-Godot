@@ -22,6 +22,9 @@ func _ready():
 	for ship in ships:
 		p1ship.add_icon_item(ship.icon, "")
 		p2ship.add_icon_item(ship.icon, "")
+	
+	updateDescP1(0)
+	updateDescP2(0)
 
 func updateDescP1(index):
 	p1shipDesc.set_text(ships[index].description)
@@ -35,17 +38,22 @@ func startDuel():
 	var p2 = ships[p2ship.selected].ship.instance()
 	
 	var p1con = Node.new()
+	p1con.set_name("Controls")
 	p1con.set_script(controlBase)
 	p1con.conf = p1con.Config.p1
 	var p2con = Node.new()
+	p2con.set_name("Controls")
 	p2con.set_script(controlBase)
 	p2con.conf = p2con.Config.p2
 	
 	p1.add_child(p1con)
 	p2.add_child(p2con)
 	
-	p1.transform.origin = Vector3(-5, 0, 0)
-	p2.transform.origin = Vector3(5, 0, 0)
+	p1con.init()
+	p2con.init()
+	
+	p1.transform.origin = Vector3(-1, 0, 0)
+	p2.transform.origin = Vector3(1, 0, 0)
 	p2.set_rotation_degrees(Vector3(0, 0, 180))
 		
 	sc.add_child(p1)
@@ -53,9 +61,8 @@ func startDuel():
 	
 	var state = sc.get_node("GameState")
 	state.shipSelect = self;
-	
-	p1.connect("tree_exited", state, "p2win")
-	p2.connect("tree_exited", state, "p1win")
+	state.p1 = p1
+	state.p2 = p2
 	
 	var camera = sc.get_node("Camera")
 	camera.playerLeft = p1
