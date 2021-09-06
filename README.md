@@ -14,6 +14,9 @@ Nostalgia 64 is a physics-based spaceship fighting game. Take control of a heavy
   
 This project is a port of an earlier project called Nostalgia 64 (Unity).
   
+# Credits
+- Special thanks to Alexander Puh for the original 2017 design of the Greenhorn-class heavy gunship as it appeared in Nostalgia 64 (Unity).
+  
 ## Ships
 ### Greenhorn
 This heavy gunship features a unified thruster, two wavy energy beams, and a wave weapon capable of pulling enemies closer
@@ -44,4 +47,3 @@ This heavy gunship features a unified thruster, two super-fast energy beams, and
 | Alt   | P2 Fire Left |
 | Ctrl  | P2 Fire Right |
 | Shift | P2 Fire Special |
-        
