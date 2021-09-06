@@ -1,4 +1,4 @@
-[gd_scene load_steps=15 format=2]
+[gd_scene load_steps=16 format=2]
 
 [ext_resource path="res://Fire.gd" type="Script" id=1]
 [ext_resource path="res://HP.gd" type="Script" id=2]
@@ -14,6 +14,7 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Cannon.svg" type="Texture" id=12]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
+[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Heading.gd" type="Script" id=15]
 
 [node name="Hull" type="RigidBody"]
 mass = 60.0
@@ -287,3 +288,7 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
 [node name="Right" type="Position3D" parent="Drive/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, 0 )
+
+[node name="Heading" type="Spatial" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422949, 0, 0 )
+script = ExtResource( 15 )

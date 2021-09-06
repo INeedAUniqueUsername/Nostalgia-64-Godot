@@ -2,8 +2,8 @@
 
 importer="texture"
 type="StreamTexture"
-path.s3tc="res://.import/HitLaser.svg-9ca2d82fd342ba2f1d828e56f8e73e59.s3tc.stex"
-path.etc2="res://.import/HitLaser.svg-9ca2d82fd342ba2f1d828e56f8e73e59.etc2.stex"
+path.s3tc="res://.import/Heading.svg-07f75a25a280322d2afe250c5ec437c7.s3tc.stex"
+path.etc2="res://.import/Heading.svg-07f75a25a280322d2afe250c5ec437c7.etc2.stex"
 metadata={
 "imported_formats": [ "s3tc", "etc2" ],
 "vram_texture": true
@@ -11,8 +11,8 @@ metadata={
 
 [deps]
 
-source_file="res://Ships/RedShift/Lightspeed-III-class courier/HitLaser.svg"
-dest_files=[ "res://.import/HitLaser.svg-9ca2d82fd342ba2f1d828e56f8e73e59.s3tc.stex", "res://.import/HitLaser.svg-9ca2d82fd342ba2f1d828e56f8e73e59.etc2.stex" ]
+source_file="res://Heading.svg"
+dest_files=[ "res://.import/Heading.svg-07f75a25a280322d2afe250c5ec437c7.s3tc.stex", "res://.import/Heading.svg-07f75a25a280322d2afe250c5ec437c7.etc2.stex" ]
 
 [params]
 

@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Concept.svg.2021_09_03_17_02_27.0.svg-edf497d027be0630636909c55d645448.stex"
+path="res://.import/Concept256.png-d9474fae8ae95f285c3873b661a18f19.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg.2021_09_03_17_02_27.0.svg"
-dest_files=[ "res://.import/Concept.svg.2021_09_03_17_02_27.0.svg-edf497d027be0630636909c55d645448.stex" ]
+source_file="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept256.png"
+dest_files=[ "res://.import/Concept256.png-d9474fae8ae95f285c3873b661a18f19.stex" ]
 
 [params]
 

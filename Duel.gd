@@ -9,12 +9,12 @@ var shipSelect
 
 func _ready():
 	
-	p1.connect("tree_exited", self, "p2win")
-	p2.connect("tree_exited", self, "p1win")
+	p1.connect("tree_exited", self, "destroyed")
+	p2.connect("tree_exited", self, "destroyed")
 	
 	
-	p1.get_node("Controls").connect("cannot_fire", self, "p2winDisarm")
-	p2.get_node("Controls").connect("cannot_fire", self, "p1winDisarm")
+	p1.get_node("Controls").connect("cannot_fire", self, "disarmed")
+	p2.get_node("Controls").connect("cannot_fire", self, "disarmed")
 	
 	winLabel = get_node("WinLabel")
 	button = get_node("Button")
@@ -23,25 +23,41 @@ func _ready():
 	
 	winLabel.hide()
 	button.hide()
-
-
-
-func p1win():
-	winLabel.set_text("DESTROYED!\nPLAYER 1 WINS")
-	showWin()
-func p2win():
-	winLabel.set_text("DESTROYED!\nPLAYER 2 WINS")
-	showWin()
-
-func p1winDisarm():
-	winLabel.set_text("DISARMED!\nPLAYER 1 WINS")
-	showWin()
-func p2winDisarm():
-	winLabel.set_text("DISARMED!\nPLAYER 2 WINS")
-	showWin()
-
 	
-func showWin():
+var time = 0
+var passed = 0
+func _process(delta):
+	
+	if over:
+		return
+	time += delta
+	passed += delta
+	if(time > 1):
+		time = 0
+		if ((p1.transform.origin - p2.transform.origin).length() > 50):
+			stalemate()
+		if passed > 120:
+			stalemate()
+
+func destroyed():
+	if is_instance_valid(p1):
+		showResult("DESTROYED!\nPLAYER 1 WINS")
+	elif is_instance_valid(p2):
+		showResult("DESTROYED!\nPLAYER 2 WINS")
+func disarmed():
+	if is_instance_valid(p1) && is_instance_valid(p2):
+		if p1.get_node("Controls").canFire():
+			showResult("DISARMED!\nPLAYER 1 WINS")
+		elif p2.get_node("Controls").canFire():
+			showResult("DISARMED!\nPLAYER 2 WINS")
+		
+func stalemate():
+	showResult("STALEMATE!\nNOBODY WINS")
+
+var over = false
+func showResult(text):
+	over = true
+	winLabel.set_text(text)
 	winLabel.show()
 	button.show()
 
