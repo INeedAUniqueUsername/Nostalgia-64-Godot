@@ -1,0 +1,41 @@
+[gd_scene load_steps=6 format=2]
+
+[ext_resource path="res://Common/BasicProjectile.gd" type="Script" id=2]
+[ext_resource path="res://Common/ParentArea.gd" type="Script" id=3]
+[ext_resource path="res://Common/Lifetime.gd" type="Script" id=4]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/SpriteTrail.gd" type="Script" id=5]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Bullet.png" type="Texture" id=7]
+
+[node name="Beam" type="RigidBody"]
+gravity_scale = 0.0
+continuous_cd = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+
+[node name="SpriteTrail" type="Node" parent="."]
+script = ExtResource( 5 )
+texture = ExtResource( 7 )
+spawnInterval = 0.001
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.015
+texture = ExtResource( 7 )
+
+[node name="Lifetime" type="Node" parent="."]
+script = ExtResource( 4 )
+lifetime = 4.0
+
+[node name="Area" type="Area" parent="."]
+input_ray_pickable = false
+angular_damp = 1.0
+script = ExtResource( 3 )
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Area"]
+depth = 0.0
+polygon = PoolVector2Array( -0.147951, 0.0756131, -0.00180882, 0.162936, 0.150636, 0.07541, 0.146551, -0.0839255, -0.000355676, -0.157474, -0.149666, -0.0822491 )
+
+[node name="Projectile" type="Node" parent="."]
+script = ExtResource( 2 )
+damage = 6
+projectileParticles = NodePath("../SpriteTrail")

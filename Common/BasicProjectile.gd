@@ -5,6 +5,7 @@ export(int) var damage
 export(NodePath) var projectileParticles
 export(PackedScene) var hitEffect
 
+signal projectile_hit
 
 func _ready():
 	get_parent().connect("body_entered", self, "body_entered")
@@ -53,5 +54,6 @@ func body_entered(body):
 			hit.set_transform(get_parent().get_global_transform().orthonormalized())
 			empty.add_child(hit)
 		
+	emit_signal("projectile_hit")
 	get_parent().queue_free()
 	pass

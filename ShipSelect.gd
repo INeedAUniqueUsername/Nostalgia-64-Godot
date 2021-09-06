@@ -52,8 +52,8 @@ func startDuel():
 	p1con.init()
 	p2con.init()
 	
-	p1.transform.origin = Vector3(-1, 0, 0)
-	p2.transform.origin = Vector3(1, 0, 0)
+	p1.transform.origin = Vector3(-5, 0, 0)
+	p2.transform.origin = Vector3(5, 0, 0)
 	p2.set_rotation_degrees(Vector3(0, 0, 180))
 		
 	sc.add_child(p1)

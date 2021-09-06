@@ -1,18 +1,20 @@
-[gd_scene load_steps=18 format=2]
+[gd_scene load_steps=20 format=2]
 
 [ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tres" type="Theme" id=2]
 [ext_resource path="res://ShipSelect.gd" type="Script" id=3]
 [ext_resource path="res://ShipEntry.gd" type="Script" id=4]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept.svg" type="Texture" id=5]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept256.png" type="Texture" id=5]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Ship.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Ship.tscn" type="PackedScene" id=7]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Concept.svg" type="Texture" id=8]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Concept256.png" type="Texture" id=8]
 [ext_resource path="res://ShipDesc.tres" type="Theme" id=9]
-[ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg" type="Texture" id=10]
+[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Concept256.png" type="Texture" id=10]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Ship.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Ship.tscn" type="PackedScene" id=12]
-[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Concept.svg" type="Texture" id=13]
+[ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept256.png" type="Texture" id=13]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Concept.png" type="Texture" id=14]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Ship.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]
 size = 64
@@ -153,16 +155,22 @@ __meta__ = {
 
 [node name="ShipList" type="Node" parent="Panel"]
 
+[node name="Royal Guard" type="Node" parent="Panel/ShipList"]
+script = ExtResource( 4 )
+description = "The Royal Guard"
+icon = ExtResource( 14 )
+ship = ExtResource( 15 )
+
 [node name="Lightspeed-II" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
 description = "The Lightspeed-II is a light gunship protected by energy shields"
-icon = ExtResource( 13 )
+icon = ExtResource( 10 )
 ship = ExtResource( 12 )
 
 [node name="Lightspeed-III" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
 description = "The Lightspeed-III is a fast gunship with a powerful laser turret"
-icon = ExtResource( 10 )
+icon = ExtResource( 13 )
 ship = ExtResource( 11 )
 
 [node name="Greenhorn" type="Node" parent="Panel/ShipList"]

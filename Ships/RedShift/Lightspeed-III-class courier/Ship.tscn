@@ -36,7 +36,7 @@ script = ExtResource( 5 )
 [node name="CollisionPolygon" type="CollisionPolygon" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0272229, -0.0311808, 0.00819361 )
 depth = 0.1
-polygon = PoolVector2Array( -0.277957, 0.234094, -0.0108369, 0.0801298, -0.00993472, 0.156234, 0.228402, 0.034954, -0.00882972, -0.0936027, -0.0103694, -0.00847799, -0.27435, -0.161227 )
+polygon = PoolVector2Array( -0.275932, 0.230089, -0.0108369, 0.0801298, -0.00993472, 0.156234, 0.228402, 0.034954, -0.00882972, -0.0936027, -0.0103694, -0.00847799, -0.27435, -0.161227 )
 
 [node name="Sprite" type="Sprite3D" parent="."]
 texture = ExtResource( 2 )
@@ -72,7 +72,7 @@ nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 
 [node name="Source" type="Spatial" parent="Cannon"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.155498, 0, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
 
 [node name="Velocity" type="Spatial" parent="Cannon/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
@@ -109,7 +109,7 @@ texture = ExtResource( 3 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="Turret"]
 depth = 0.1
-polygon = PoolVector2Array( -0.0306184, 0.0595601, -0.0257358, 0.100801, 0.0944029, 0.0407502, 0.0928301, -0.0499298, -0.0269238, -0.103545, -0.0252107, -0.073461, -0.0667862, -0.0612991, -0.0950332, -0.0229796, -0.0943908, 0.00892223, -0.0671482, 0.0431015 )
+polygon = PoolVector2Array( -0.0260084, 0.0609383, -0.024533, 0.0954518, 0.00492634, 0.0948628, 0.091855, 0.0403937, 0.0928301, -0.0499298, 0.00153734, -0.0942923, -0.0249692, -0.0939673, -0.0251589, -0.069636, -0.0614842, -0.0611188, -0.0925901, -0.0258607, -0.0921606, 0.008346, -0.0599177, 0.0509702 )
 
 [node name="Pin" type="PinJoint" parent="Turret"]
 nodes/node_a = NodePath("..")

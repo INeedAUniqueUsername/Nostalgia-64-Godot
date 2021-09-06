@@ -1,0 +1,23 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Common/Lifetime.gd" type="Script" id=1]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Bullet.png" type="Texture" id=2]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/SpriteFade.gd" type="Script" id=3]
+
+[node name="Beam" type="RigidBody"]
+gravity_scale = 0.0
+continuous_cd = true
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+pixel_size = 0.02
+texture = ExtResource( 2 )
+script = ExtResource( 3 )
+lifetime = 0.4
+startOpacity = 1.0
+
+[node name="Lifetime" type="Node" parent="."]
+script = ExtResource( 1 )
+lifetime = 0.4
