@@ -27,7 +27,7 @@ texture = ExtResource( 6 )
 
 [node name="Lifetime" type="Node" parent="."]
 script = ExtResource( 4 )
-lifetime = 0.25
+lifetime = 0.5
 
 [node name="Area" type="Area" parent="."]
 input_ray_pickable = false

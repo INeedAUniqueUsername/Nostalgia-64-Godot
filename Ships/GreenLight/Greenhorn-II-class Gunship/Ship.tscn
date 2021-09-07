@@ -88,6 +88,7 @@ script = ExtResource( 1 )
 projectile = ExtResource( 10 )
 fireCooldown = 3.0
 position = NodePath("../Beam")
+detonateOnPress = true
 
 [node name="HP" type="Node" parent="BeamSuper"]
 script = ExtResource( 2 )

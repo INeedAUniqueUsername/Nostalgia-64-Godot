@@ -1,8 +1,9 @@
-[gd_scene load_steps=5 format=2]
+[gd_scene load_steps=6 format=2]
 
 [ext_resource path="res://Ships/RoyalShade/Royal Guard/Missile Blast.png" type="Texture" id=1]
 [ext_resource path="res://Ships/RoyalShade/Royal Guard/Blast.gd" type="Script" id=2]
 [ext_resource path="res://Common/ParentArea.gd" type="Script" id=3]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Knockback.gd" type="Script" id=4]
 [ext_resource path="res://Ships/RoyalShade/Royal Guard/Expand.gd" type="Script" id=5]
 
 [node name="Blast" type="RigidBody"]
@@ -31,4 +32,8 @@ polygon = PoolVector2Array( -0.165377, 0.283548, 0.160923, 0.286047, 0.28581, 0.
 
 [node name="Projectile" type="Node" parent="."]
 script = ExtResource( 2 )
-damage = 5
+damage = 12
+
+[node name="Knockback" type="Node" parent="."]
+script = ExtResource( 4 )
+knockback = 5.0

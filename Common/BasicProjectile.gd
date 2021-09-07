@@ -54,6 +54,6 @@ func body_entered(body):
 			hit.set_transform(get_parent().get_global_transform().orthonormalized())
 			empty.add_child(hit)
 		
-	emit_signal("projectile_hit")
+	emit_signal("projectile_hit", body)
 	get_parent().queue_free()
 	pass

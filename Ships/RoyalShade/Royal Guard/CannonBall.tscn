@@ -1,9 +1,11 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=8 format=2]
 
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Knockback.gd" type="Script" id=1]
 [ext_resource path="res://Common/BasicProjectile.gd" type="Script" id=2]
 [ext_resource path="res://Common/ParentArea.gd" type="Script" id=3]
 [ext_resource path="res://Common/Lifetime.gd" type="Script" id=4]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/SpriteTrail.gd" type="Script" id=5]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/CannonHit.tscn" type="PackedScene" id=6]
 [ext_resource path="res://Ships/RoyalShade/Royal Guard/Bullet.png" type="Texture" id=7]
 
 [node name="Beam" type="RigidBody"]
@@ -39,3 +41,8 @@ polygon = PoolVector2Array( -0.147951, 0.0756131, -0.00180882, 0.162936, 0.15063
 script = ExtResource( 2 )
 damage = 6
 projectileParticles = NodePath("../SpriteTrail")
+hitEffect = ExtResource( 6 )
+
+[node name="Knockback" type="Node" parent="."]
+script = ExtResource( 1 )
+knockback = 15.0

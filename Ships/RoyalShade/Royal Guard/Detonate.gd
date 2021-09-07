@@ -5,7 +5,7 @@ export(PackedScene) var explosion
 func _ready():
 	get_parent().get_node("Projectile").connect("projectile_hit", self, "on_projectile_hit")
 
-func on_projectile_hit():
+func on_projectile_hit(body):
 	var e = explosion.instance()
 	e.transform.origin = get_parent().transform.origin
 	e.get_node("Projectile").creator = get_parent().get_node("Projectile").creator

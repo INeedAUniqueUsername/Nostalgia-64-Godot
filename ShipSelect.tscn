@@ -157,31 +157,31 @@ __meta__ = {
 
 [node name="Royal Guard" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
-description = "The Royal Guard"
+description = "Making up the Royal Shade's strongest forces, The Royal Guard carries dual rocket launchers and an powerful iron cannon"
 icon = ExtResource( 14 )
 ship = ExtResource( 15 )
 
 [node name="Lightspeed-II" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
-description = "The Lightspeed-II is a light gunship protected by energy shields"
+description = "The Lightspeed-II light gunship is protected by energy shields"
 icon = ExtResource( 10 )
 ship = ExtResource( 12 )
 
 [node name="Lightspeed-III" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
-description = "The Lightspeed-III is a fast gunship with a powerful laser turret"
+description = "The Lightspeed-III gunship drives fast and attacks fast with both a laser turret and laser cannon"
 icon = ExtResource( 13 )
 ship = ExtResource( 11 )
 
 [node name="Greenhorn" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
-description = "This slow, heavy gunship fires high-speed beams and a pulling force wave"
+description = "The slow, heavy Greenhorn launches rapid energy beams and fragmenting energy shots"
 icon = ExtResource( 5 )
 ship = ExtResource( 6 )
 
 [node name="Greenhorn-II" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
-description = "This armored gunship fires wavy energy beams"
+description = "The Greenhorn-II launches wavy energy beams and drops fragmenting energy bombs"
 icon = ExtResource( 8 )
 ship = ExtResource( 7 )
 

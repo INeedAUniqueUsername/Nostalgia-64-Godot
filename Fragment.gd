@@ -15,11 +15,12 @@ func on_lifetime_expired():
 	var p = get_parent()
 	var pos = p.transform.origin
 	var vel = p.linear_velocity
-	var angle = atan2(vel.y, vel.x)
+	var direction = p.rotation.z + deg2rad(angle)
+	#var velAngle = atan2(vel.y, vel.x)
 	for i in range(count):
 		var f = fragment.instance()
 		
-		var a = floor((i + 1)/2) * angle
+		var a = floor((i + 1)/2) * direction
 		if(i%2 == 1):
 			a = -a
 		

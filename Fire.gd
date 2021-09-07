@@ -4,11 +4,18 @@ export(PackedScene) var projectile
 export(float) var fireCooldown
 export(NodePath) var position
 
+export(bool) var detonateOnPress = false
+var lastShot
+
+
 var fireCooldownLeft = 0;
 var active = false
 var velocity;
 func onPressed():
 	active = true
+	
+	if(detonateOnPress && lastShot != null && is_instance_valid(lastShot) && lastShot.is_inside_tree()):
+		lastShot.get_node("Lifetime").lifetime = 0.0
 	pass
 func onReleased():
 	active = false;
@@ -45,9 +52,11 @@ func _process(delta):
 		p = shot.get_node("Projectile");
 		if(p != null):
 			p.creator = creator;
+			lastShot = shot
 		p = shot.get_node("Pull")
 		if(p != null):
 			p.creator = creator;
+			lastShot = shot
 		
 		add_child(shot)
 	pass
