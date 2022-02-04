@@ -2,15 +2,15 @@
 
 importer="texture"
 type="StreamTexture"
-path="res://.import/Concept.svg-b4d1a560fb0b3954fbe88c212e35e1cb.stex"
+path="res://.import/Concept.png-7bc0fdafc7ffe898754072bb1dcf3492.stex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg"
-dest_files=[ "res://.import/Concept.svg-b4d1a560fb0b3954fbe88c212e35e1cb.stex" ]
+source_file="res://Ships/RedShift/Lightspeed-III-class courier/Concept.png"
+dest_files=[ "res://.import/Concept.png-7bc0fdafc7ffe898754072bb1dcf3492.stex" ]
 
 [params]
 

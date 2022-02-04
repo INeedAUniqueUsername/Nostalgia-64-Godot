@@ -2,8 +2,8 @@
 
 [ext_resource path="res://IBMPlexMono-Regular.ttf" type="DynamicFontData" id=1]
 [ext_resource path="res://Title.tres" type="Theme" id=2]
-[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept.svg" type="Texture" id=3]
-[ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.svg" type="Texture" id=4]
+[ext_resource path="res://Ships/GreenLight/Greenhorn-class Heavy Gunship/Concept.png" type="Texture" id=3]
+[ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept.png" type="Texture" id=4]
 [ext_resource path="res://SceneButton.gd" type="Script" id=5]
 [ext_resource path="res://ShipSelect.tscn" type="PackedScene" id=6]
 [ext_resource path="res://ShipDesc.tres" type="Theme" id=7]
@@ -17,11 +17,11 @@ default_font = SubResource( 1 )
 
 [sub_resource type="StyleBoxTexture" id=3]
 texture = ExtResource( 4 )
-region_rect = Rect2( 0, 0, 60, 41 )
+region_rect = Rect2( 0, 0, 240, 164 )
 
 [sub_resource type="StyleBoxTexture" id=4]
 texture = ExtResource( 3 )
-region_rect = Rect2( 0, 0, 132, 113 )
+region_rect = Rect2( 0, 0, 528, 450 )
 
 [node name="Control" type="Control"]
 anchor_right = 1.0

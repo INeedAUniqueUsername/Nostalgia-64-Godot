@@ -9,9 +9,9 @@
    id="svg8"
    inkscape:version="1.1 (c68e22c387, 2021-05-23)"
    sodipodi:docname="Concept.svg"
-   inkscape:export-filename="C:\Users\Alex\Documents\Nostalgia 64\Sprites\Courier III\Concept.png"
-   inkscape:export-xdpi="192"
-   inkscape:export-ydpi="192"
+   inkscape:export-filename="C:\Users\alexm\source\repos\Nostalgia-64-Godot\Ships\RedShift\Lightspeed-III-class courier\Concept.png"
+   inkscape:export-xdpi="193.39099"
+   inkscape:export-ydpi="193.39099"
    xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
    xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
    xmlns="http://www.w3.org/2000/svg"
@@ -29,7 +29,7 @@
      inkscape:pageopacity="0.0"
      inkscape:pageshadow="2"
      inkscape:zoom="22.627418"
-     inkscape:cx="21.500465"
+     inkscape:cx="21.522562"
      inkscape:cy="25.897785"
      inkscape:document-units="mm"
      inkscape:current-layer="layer1-3-1"
@@ -60,7 +60,6 @@
         <dc:format>image/svg+xml</dc:format>
         <dc:type
            rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
-        <dc:title />
       </cc:Work>
     </rdf:RDF>
   </metadata>

@@ -43,6 +43,7 @@ func _process(delta):
 				segmentCreated.transform.origin = pos + Vector3(cos(deg2rad(facing + segmentAngle)) * radius, sin(deg2rad(facing + segmentAngle)) * radius, 0)
 				segmentCreated.set_rotation_degrees(Vector3(0, 0, facing + segmentAngle))
 				segmentCreated.get_node("Sprite").opacity = 0
-				$Segments.add_child(segmentCreated)
+				#get_parent().get_node("Segments").
+				add_child(segmentCreated)
 				segments[i] = segmentCreated
 				break

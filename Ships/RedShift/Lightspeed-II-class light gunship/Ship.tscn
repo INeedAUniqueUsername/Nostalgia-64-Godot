@@ -150,7 +150,6 @@ nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 
 [node name="Segments" type="Spatial" parent="Shield"]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 0, 0 )
 
 [node name="DriveLeft" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, -0.215, 0 )
