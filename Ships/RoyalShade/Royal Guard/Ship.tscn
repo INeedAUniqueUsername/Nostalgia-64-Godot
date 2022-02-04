@@ -33,7 +33,7 @@ script = ExtResource( 5 )
 [node name="CollisionPolygon" type="CollisionPolygon" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0272229, -0.0311808, 0.00819361 )
 depth = 0.1
-polygon = PoolVector2Array( -0.488488, 0.248842, -0.48127, -0.195702, 0.282385, -0.197637, 0.434434, -0.107035, 0.446096, 0.155116, 0.2701, 0.252904 )
+polygon = PoolVector2Array( -0.468943, 0.236225, -0.468574, -0.180571, 0.255832, -0.177809, 0.412513, -0.0836653, 0.406447, 0.153027, 0.252572, 0.238456 )
 
 [node name="Sprite" type="Sprite3D" parent="."]
 texture = ExtResource( 2 )
@@ -64,11 +64,9 @@ texture = ExtResource( 7 )
 depth = 0.1
 polygon = PoolVector2Array( -0.197503, 0.20114, -0.0570989, 0.156059, -0.0541048, 0.089306, 0.333008, 0.08534, 0.333791, -0.0656797, -0.0518057, -0.0665762, -0.052244, -0.156896, -0.185358, -0.19815, -0.241566, -0.123842, -0.34005, -0.12461, -0.335837, 0.140446, -0.229952, 0.141818 )
 
-[node name="Pin" type="HingeJoint" parent="Cannon"]
+[node name="Pin" type="PinJoint" parent="Cannon"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/upper = 0.1
-angular_limit/lower = -0.1
 
 [node name="Source" type="Spatial" parent="Cannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.5, 0, 0 )
@@ -102,11 +100,9 @@ texture = ExtResource( 3 )
 depth = 0.1
 polygon = PoolVector2Array( -0.420522, 0.072331, -0.261051, 0.0702964, -0.260135, 0.165885, 0.34643, 0.164279, 0.340519, -0.162713, -0.423598, -0.163401 )
 
-[node name="Pin" type="HingeJoint" parent="MissileLeft"]
+[node name="Pin" type="PinJoint" parent="MissileLeft"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/upper = 0.1
-angular_limit/lower = -0.1
 
 [node name="Source" type="Spatial" parent="MissileLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0 )
@@ -140,11 +136,9 @@ texture = ExtResource( 4 )
 depth = 0.1
 polygon = PoolVector2Array( -0.259453, -0.0758486, -0.422918, -0.0745583, -0.420315, 0.164073, 0.34643, 0.164279, 0.340519, -0.162713, -0.26291, -0.162319 )
 
-[node name="Pin" type="HingeJoint" parent="MissileRight"]
+[node name="Pin" type="PinJoint" parent="MissileRight"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
-angular_limit/upper = 0.1
-angular_limit/lower = -0.1
 
 [node name="Source" type="Spatial" parent="MissileRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.6, 0, 0 )
@@ -170,14 +164,13 @@ texture = ExtResource( 1 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="DriveLeft"]
 depth = 0.1
-polygon = PoolVector2Array( -0.196459, -0.0724781, -0.189711, 0.0722368, 0.19809, 0.0726237, 0.194357, -0.0750961 )
+polygon = PoolVector2Array( -0.2, -0.075, -0.2, 0.075, 0.19, 0.075, 0.19, -0.075 )
 
-[node name="PinJoint" type="HingeJoint" parent="DriveLeft"]
+[node name="Pin" type="PinJoint" parent="DriveLeft"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0 )
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 params/bias = 0.1
-angular_limit/upper = 0.1
-angular_limit/lower = -0.1
 
 [node name="ThrustRight" type="Node" parent="DriveLeft"]
 script = ExtResource( 8 )
@@ -211,14 +204,13 @@ texture = ExtResource( 1 )
 
 [node name="CollisionPolygon" type="CollisionPolygon" parent="DriveRight"]
 depth = 0.1
-polygon = PoolVector2Array( -0.196459, -0.0724781, -0.189711, 0.0722368, 0.19809, 0.0726237, 0.194357, -0.0750961 )
+polygon = PoolVector2Array( -0.2, -0.075, -0.2, 0.075, 0.19, 0.075, 0.19, -0.075 )
 
-[node name="PinJoint" type="HingeJoint" parent="DriveRight"]
+[node name="Pin" type="PinJoint" parent="DriveRight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.2, 0, 0 )
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 params/bias = 0.1
-angular_limit/upper = 0.1
-angular_limit/lower = -0.1
 
 [node name="ThrustLeft" type="Node" parent="DriveRight"]
 script = ExtResource( 8 )

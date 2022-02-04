@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/DriveSide.svg" type="Texture" id=1]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/HexShieldGenerator.svg" type="Texture" id=2]
@@ -15,6 +15,7 @@
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/DriveMain.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/ExhaustMiddle.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Heading.gd" type="Script" id=15]
+[ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/ShieldBash.gd" type="Script" id=16]
 
 [node name="Hull" type="RigidBody"]
 mass = 75.0
@@ -40,8 +41,8 @@ polygon = PoolVector2Array( -0.277957, 0.234094, -0.0108369, 0.0801298, -0.00993
 [node name="Sprite" type="Sprite3D" parent="."]
 texture = ExtResource( 4 )
 
-[node name="Cannon" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.145208, 0, 0 )
+[node name="CannonLeft" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.15, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -49,31 +50,67 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireMiddle" type="Node" parent="Cannon"]
+[node name="FireLeft" type="Node" parent="CannonLeft"]
 script = ExtResource( 10 )
 projectile = ExtResource( 11 )
 fireCooldown = 0.15
 position = NodePath("../Source")
 
-[node name="HP" type="Node" parent="Cannon"]
+[node name="HP" type="Node" parent="CannonLeft"]
 script = ExtResource( 9 )
 hp = 60
 
-[node name="Sprite" type="Sprite3D" parent="Cannon"]
+[node name="Sprite" type="Sprite3D" parent="CannonLeft"]
 texture = ExtResource( 3 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="Cannon"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="CannonLeft"]
 depth = 0.1
 polygon = PoolVector2Array( -0.0405694, 0.0495082, 0.0355828, 0.00342222, -0.0390907, -0.0492784 )
 
-[node name="Pin" type="PinJoint" parent="Cannon"]
+[node name="Pin" type="PinJoint" parent="CannonLeft"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 
-[node name="Source" type="Spatial" parent="Cannon"]
+[node name="Source" type="Spatial" parent="CannonLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202895, 0, 0 )
 
-[node name="Velocity" type="Spatial" parent="Cannon/Source"]
+[node name="Velocity" type="Spatial" parent="CannonLeft/Source"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
+
+[node name="CannonRight" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, -0.15, 0 )
+mass = 0.1
+gravity_scale = 0.0
+axis_lock_linear_z = true
+axis_lock_angular_x = true
+axis_lock_angular_y = true
+linear_damp = 0.0
+
+[node name="FireRight" type="Node" parent="CannonRight"]
+script = ExtResource( 10 )
+projectile = ExtResource( 11 )
+fireCooldown = 0.15
+position = NodePath("../Source")
+
+[node name="HP" type="Node" parent="CannonRight"]
+script = ExtResource( 9 )
+hp = 60
+
+[node name="Sprite" type="Sprite3D" parent="CannonRight"]
+texture = ExtResource( 3 )
+
+[node name="CollisionPolygon" type="CollisionPolygon" parent="CannonRight"]
+depth = 0.1
+polygon = PoolVector2Array( -0.0405694, 0.0495082, 0.0355828, 0.00342222, -0.0390907, -0.0492784 )
+
+[node name="Pin" type="PinJoint" parent="CannonRight"]
+nodes/node_a = NodePath("..")
+nodes/node_b = NodePath("../..")
+
+[node name="Source" type="Spatial" parent="CannonRight"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.202895, 0, 0 )
+
+[node name="Velocity" type="Spatial" parent="CannonRight/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 20, 0, 0 )
 
 [node name="Shield" type="RigidBody" parent="."]
@@ -84,6 +121,9 @@ axis_lock_linear_z = true
 axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
+
+[node name="FireMiddle" type="Node" parent="Shield"]
+script = ExtResource( 16 )
 
 [node name="ShieldGenerator" type="Node" parent="Shield"]
 script = ExtResource( 6 )
@@ -108,6 +148,9 @@ polygon = PoolVector2Array( -0.0127703, 0.043969, 0.011954, 0.0435104, 0.0426673
 [node name="Pin" type="PinJoint" parent="Shield"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
+
+[node name="Segments" type="Spatial" parent="Shield"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.135, 0, 0 )
 
 [node name="DriveLeft" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.13, -0.215, 0 )

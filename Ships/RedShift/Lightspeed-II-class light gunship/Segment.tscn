@@ -3,12 +3,7 @@
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/HexShieldSegment.svg" type="Texture" id=2]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/ShieldSegment.gd" type="Script" id=3]
 
-[node name="Beam" type="RigidBody"]
-gravity_scale = 0.0
-continuous_cd = true
-axis_lock_linear_z = true
-axis_lock_angular_x = true
-axis_lock_angular_y = true
+[node name="Beam" type="Area"]
 
 [node name="Sprite" type="Sprite3D" parent="."]
 pixel_size = 0.015

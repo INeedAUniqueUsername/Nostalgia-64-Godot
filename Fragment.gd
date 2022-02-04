@@ -20,7 +20,7 @@ func on_lifetime_expired():
 	for i in range(count):
 		var f = fragment.instance()
 		
-		var a = floor((i + 1)/2) * direction
+		var a = floor((i + 1)/2) * angle
 		if(i%2 == 1):
 			a = -a
 		

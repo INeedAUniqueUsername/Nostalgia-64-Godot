@@ -13,7 +13,7 @@
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Ship.tscn" type="PackedScene" id=11]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Ship.tscn" type="PackedScene" id=12]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Concept256.png" type="Texture" id=13]
-[ext_resource path="res://Ships/RoyalShade/Royal Guard/Concept.png" type="Texture" id=14]
+[ext_resource path="res://Ships/RoyalShade/Royal Guard/Concept256.png" type="Texture" id=14]
 [ext_resource path="res://Ships/RoyalShade/Royal Guard/Ship.tscn" type="PackedScene" id=15]
 
 [sub_resource type="DynamicFont" id=1]

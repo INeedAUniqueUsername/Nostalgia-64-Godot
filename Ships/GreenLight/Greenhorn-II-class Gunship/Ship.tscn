@@ -32,7 +32,7 @@ hp = 300
 [node name="Impact" type="Node" parent="."]
 script = ExtResource( 11 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="."]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
 depth = 0.1
 polygon = PoolVector2Array( -0.105604, -0.147451, -0.107582, -0.54882, 0.0976142, -0.341122, 0.0974367, -0.141409, 0.219602, -0.00263182, 0.0966282, 0.139983, 0.0909557, 0.346623, -0.0991188, 0.537592, -0.10885, 0.158664, -0.226166, -0.000458719 )
 
@@ -61,7 +61,7 @@ hp = 60
 [node name="Sprite" type="Sprite3D" parent="CannonLeft"]
 texture = ExtResource( 12 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon" parent="CannonLeft"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="CannonLeft"]
 depth = 0.1
 polygon = PoolVector2Array( 0.183261, -0.00633129, 0.117149, -0.0321627, 0.0832996, -0.0335257, 0.0230788, -0.0814368, -0.138122, -0.0828246, -0.195872, -0.0316109, -0.194221, 0.0262834, -0.139278, 0.0733438, 0.0202881, 0.07375, 0.0780624, 0.0166673, 0.120165, 0.0165047 )
 
@@ -97,7 +97,7 @@ hp = 60
 [node name="Sprite" type="Sprite3D" parent="BeamSuper"]
 texture = ExtResource( 5 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="BeamSuper"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="BeamSuper"]
 depth = 0.1
 polygon = PoolVector2Array( 0.135019, 0.00767557, 0.0623625, -0.102619, 0.0087777, -0.101067, 0.00779432, -0.0253379, -0.0108223, -0.0242069, -0.00900987, -0.101302, -0.0643019, -0.100866, -0.0606069, -0.0233101, -0.112556, -0.0238101, -0.111883, 0.0336495, -0.0575366, 0.0329302, -0.0594609, 0.113773, -0.010572, 0.114244, -0.0112546, 0.0335578, 0.00927, 0.032867, 0.0124957, 0.114633, 0.0532545, 0.114139 )
 
@@ -164,7 +164,7 @@ hp = 90
 [node name="Sprite" type="Sprite3D" parent="ArmorFrontLeft"]
 texture = ExtResource( 13 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon" parent="ArmorFrontLeft"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorFrontLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00649452, 0.0193551, -0.00224595 )
 depth = 0.1
 polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
@@ -184,7 +184,7 @@ hp = 90
 [node name="Sprite3D" type="Sprite3D" parent="ArmorFrontRight"]
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon" parent="ArmorFrontRight"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorFrontRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.001 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0657206, -0.120978, 0.000191718, -0.119093, 0.179804, 0.118435, 0.116872, 0.116059, 0.0420395, 0.0216388, -0.192012, 0.0200922, -0.189518, -0.0335504, 0.00740382, -0.0297422 )
@@ -204,7 +204,7 @@ hp = 90
 [node name="Sprite" type="Sprite3D" parent="ArmorBackLeft"]
 texture = ExtResource( 13 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon" parent="ArmorBackLeft"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorBackLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00649452, 0.0193551, -0.00224595 )
 depth = 0.1
 polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
@@ -224,7 +224,7 @@ hp = 90
 [node name="Sprite3D" type="Sprite3D" parent="ArmorBackRight"]
 texture = ExtResource( 6 )
 
-[node name="CollisionPolygon2D3" type="CollisionPolygon" parent="ArmorBackRight"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorBackRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.001 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0657206, -0.120978, 0.000191718, -0.119093, 0.179804, 0.118435, 0.116872, 0.116059, 0.0420395, 0.0216388, -0.192012, 0.0200922, -0.189518, -0.0335504, 0.00740382, -0.0297422 )
@@ -245,11 +245,11 @@ hp = 150
 [node name="Sprite" type="Sprite3D" parent="Drive"]
 texture = ExtResource( 4 )
 
-[node name="CollisionPolygon2D" type="CollisionPolygon" parent="Drive"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Drive"]
 depth = 0.1
 polygon = PoolVector2Array( -0.0938871, 0.142705, -0.23696, -0.00610106, -0.0971432, -0.148976, 0.231361, -0.146961, 0.171806, -0.0849541, 0.0183761, -0.0883016, -0.0562975, -0.000616033, 0.0156538, 0.0790166, 0.175636, 0.0753701, 0.230944, 0.143184 )
 
-[node name="PinJoint" type="PinJoint" parent="Drive"]
+[node name="Pin" type="PinJoint" parent="Drive"]
 nodes/node_a = NodePath("..")
 nodes/node_b = NodePath("../..")
 params/bias = 0.1
