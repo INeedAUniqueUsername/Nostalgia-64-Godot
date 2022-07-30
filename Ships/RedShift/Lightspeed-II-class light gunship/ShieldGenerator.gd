@@ -16,7 +16,7 @@ func _ready():
 		segments.push_back(null)
 func _process(delta):
 	var pos = get_parent().global_transform.origin
-	var facing = get_parent().get_parent().rotation_degrees.z
+	var facing = get_parent().rotation_degrees.z+180
 	var centerIndex = floor(segmentCount/2)
 	
 	for i in range(segmentCount):
@@ -26,12 +26,10 @@ func _process(delta):
 				var segmentAngle = (i - centerIndex) * segmentSpan
 				s.transform.origin = pos + Vector3(cos(deg2rad(facing + segmentAngle)) * radius, sin(deg2rad(facing + segmentAngle)) * radius, 0)
 				s.set_rotation_degrees(Vector3(0, 0, facing + segmentAngle))
-				
 				s = s.get_node("HP")
 				s.hp = min(s.hp + segmentRegenRate, s.maxHp)
 			else:
 				segments[i] = null
-	
 	if(segmentCreateTimeLeft > 0):
 		segmentCreateTimeLeft -= delta
 	else:
@@ -46,4 +44,3 @@ func _process(delta):
 				#get_parent().get_node("Segments").
 				add_child(segmentCreated)
 				segments[i] = segmentCreated
-				break

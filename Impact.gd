@@ -13,7 +13,3 @@ func _ready():
 func on_body_entered(other):
 	if(other.get_node("HP")):
 		other.damage(20)
-		pass
-
-func _process(delta):
-	pass

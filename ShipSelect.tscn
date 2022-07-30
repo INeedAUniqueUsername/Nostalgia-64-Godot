@@ -155,6 +155,18 @@ __meta__ = {
 
 [node name="ShipList" type="Node" parent="Panel"]
 
+[node name="Greenhorn" type="Node" parent="Panel/ShipList"]
+script = ExtResource( 4 )
+description = "The slow, heavy Greenhorn launches rapid energy beams and fragmenting energy shots"
+icon = ExtResource( 5 )
+ship = ExtResource( 6 )
+
+[node name="Greenhorn-II" type="Node" parent="Panel/ShipList"]
+script = ExtResource( 4 )
+description = "The Greenhorn-II launches wavy energy beams and drops fragmenting energy bombs"
+icon = ExtResource( 8 )
+ship = ExtResource( 7 )
+
 [node name="Royal Guard" type="Node" parent="Panel/ShipList"]
 script = ExtResource( 4 )
 description = "Making up the Royal Shade's strongest forces, The Royal Guard carries dual rocket launchers and an powerful iron cannon"
@@ -172,17 +184,5 @@ script = ExtResource( 4 )
 description = "The Lightspeed-III gunship drives fast and attacks fast with both a laser turret and laser cannon"
 icon = ExtResource( 13 )
 ship = ExtResource( 11 )
-
-[node name="Greenhorn" type="Node" parent="Panel/ShipList"]
-script = ExtResource( 4 )
-description = "The slow, heavy Greenhorn launches rapid energy beams and fragmenting energy shots"
-icon = ExtResource( 5 )
-ship = ExtResource( 6 )
-
-[node name="Greenhorn-II" type="Node" parent="Panel/ShipList"]
-script = ExtResource( 4 )
-description = "The Greenhorn-II launches wavy energy beams and drops fragmenting energy bombs"
-icon = ExtResource( 8 )
-ship = ExtResource( 7 )
 
 [connection signal="pressed" from="Panel/Start" to="Panel" method="startDuel"]

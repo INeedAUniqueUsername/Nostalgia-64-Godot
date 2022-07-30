@@ -18,12 +18,16 @@ func onReleased():
 	active = false
 	pass
 
+var prevPos:  Vector3
 func _ready():
 	pos = get_node(pos)
 	accel = get_node(accel)
-	pass
-
+	prevPos = pos.get_global_transform().origin
 func _process(delta):
+	var currentPos = pos.get_global_transform().origin
+	var vel = (currentPos - prevPos) / delta
+	prevPos = currentPos
+	
 	if(active):
 		var impulse = (accel.get_global_transform().origin - pos.get_global_transform().origin);
 		if(exhaust):
@@ -32,15 +36,14 @@ func _process(delta):
 			else:
 				exhaustTime = exhaustInterval
 				var exhaustShot = exhaust.instance()
-				exhaustShot.set_transform(pos.get_global_transform().orthonormalized())
-				exhaustShot.linear_velocity = get_parent().get_parent().linear_velocity
-				exhaustShot.apply_impulse(Vector3(0, 0, 0), -impulse)
+				exhaustShot.set_transform(pos.get_global_transform())
+				exhaustShot.linear_velocity = vel - impulse
+				#exhaustShot.apply_impulse(Vector3(0, 0, 0), -impulse)
 				
 				var p = exhaustShot.get_node("Projectile")
 				if(p != null):
 					p.creator = get_parent().get_parent()
-				
-				add_child(exhaustShot)
+				get_tree().get_nodes_in_group("World")[0].add_child(exhaustShot)
 		
 		get_parent().apply_impulse(pos.translation, impulse * delta * thrustMultiplier)
 		

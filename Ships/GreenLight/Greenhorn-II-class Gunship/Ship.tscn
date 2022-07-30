@@ -1,4 +1,4 @@
-[gd_scene load_steps=16 format=2]
+[gd_scene load_steps=17 format=2]
 
 [ext_resource path="res://Fire.gd" type="Script" id=1]
 [ext_resource path="res://HP.gd" type="Script" id=2]
@@ -15,8 +15,12 @@
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/PlateLeft.svg" type="Texture" id=13]
 [ext_resource path="res://Ships/GreenLight/Greenhorn-II-class Gunship/Exhaust.tscn" type="PackedScene" id=14]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Heading.gd" type="Script" id=15]
+[ext_resource path="res://Ship.gd" type="Script" id=16]
 
-[node name="Hull" type="RigidBody"]
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 16 )
+
+[node name="Hull" type="RigidBody" parent="."]
 mass = 60.0
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -25,22 +29,123 @@ axis_lock_angular_y = true
 linear_damp = 0.0
 angular_damp = 0.0
 
-[node name="HP" type="Node" parent="."]
+[node name="HP" type="Node" parent="Hull"]
 script = ExtResource( 2 )
 hp = 300
 
-[node name="Impact" type="Node" parent="."]
+[node name="Impact" type="Node" parent="Hull"]
 script = ExtResource( 11 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Hull"]
 depth = 0.1
 polygon = PoolVector2Array( -0.105604, -0.147451, -0.107582, -0.54882, 0.0976142, -0.341122, 0.0974367, -0.141409, 0.219602, -0.00263182, 0.0966282, 0.139983, 0.0909557, 0.346623, -0.0991188, 0.537592, -0.10885, 0.158664, -0.226166, -0.000458719 )
 
-[node name="Sprite" type="Sprite3D" parent="."]
+[node name="Sprite" type="Sprite3D" parent="Hull"]
 texture = ExtResource( 7 )
 
-[node name="CannonLeft" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, 0.45, 0 )
+[node name="Heading" type="Spatial" parent="Hull"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422949, 0, 0 )
+script = ExtResource( 15 )
+
+[node name="Joints" type="Spatial" parent="Hull"]
+
+[node name="LeftCannon" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0145286, 0.45, 0 )
+nodes/node_a = NodePath("../../../LeftCannon")
+nodes/node_b = NodePath("../..")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="BeamSuper" type="HingeJoint" parent="Hull/Joints"]
+nodes/node_a = NodePath("../../../BeamSuper")
+nodes/node_b = NodePath("../..")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="RightCannon" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.015, -0.45, 0 )
+nodes/node_a = NodePath("../../../RightCannon")
+nodes/node_b = NodePath("../..")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="ArmorFrontLeft" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, 0.225, 0 )
+nodes/node_a = NodePath("../../../Drive")
+nodes/node_b = NodePath("../../../ArmorFrontLeft")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="ArmorFrontRight" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.125, -0.225, 0 )
+nodes/node_a = NodePath("../../../Drive")
+nodes/node_b = NodePath("../../../ArmorFrontRight")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="ArmorBackLeft" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, 0.45, 0 )
+nodes/node_a = NodePath("../../../Drive")
+nodes/node_b = NodePath("../../../ArmorBackLeft")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="ArmorBackRight" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.125, -0.45, 0 )
+nodes/node_a = NodePath("../../../Drive")
+nodes/node_b = NodePath("../../../ArmorBackRight")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="Drive" type="HingeJoint" parent="Hull/Joints"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.39, 0, 0 )
+nodes/node_a = NodePath("../../../Drive")
+nodes/node_b = NodePath("../..")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
+
+[node name="LeftCannon" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, 0.45, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -48,31 +153,27 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireLeft" type="Node" parent="CannonLeft"]
+[node name="FireLeft" type="Node" parent="LeftCannon"]
 script = ExtResource( 1 )
 projectile = ExtResource( 9 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 
-[node name="HP" type="Node" parent="CannonLeft"]
+[node name="HP" type="Node" parent="LeftCannon"]
 script = ExtResource( 2 )
 hp = 60
 
-[node name="Sprite" type="Sprite3D" parent="CannonLeft"]
+[node name="Sprite" type="Sprite3D" parent="LeftCannon"]
 texture = ExtResource( 12 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="CannonLeft"]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="LeftCannon"]
 depth = 0.1
 polygon = PoolVector2Array( 0.183261, -0.00633129, 0.117149, -0.0321627, 0.0832996, -0.0335257, 0.0230788, -0.0814368, -0.138122, -0.0828246, -0.195872, -0.0316109, -0.194221, 0.0262834, -0.139278, 0.0733438, 0.0202881, 0.07375, 0.0780624, 0.0166673, 0.120165, 0.0165047 )
 
-[node name="Pin" type="PinJoint" parent="CannonLeft"]
-nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-
-[node name="Beam" type="Spatial" parent="CannonLeft"]
+[node name="Beam" type="Spatial" parent="LeftCannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0.00349635, 0 )
 
-[node name="Velocity" type="Spatial" parent="CannonLeft/Beam"]
+[node name="Velocity" type="Spatial" parent="LeftCannon/Beam"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
 [node name="BeamSuper" type="RigidBody" parent="."]
@@ -101,17 +202,13 @@ texture = ExtResource( 5 )
 depth = 0.1
 polygon = PoolVector2Array( 0.135019, 0.00767557, 0.0623625, -0.102619, 0.0087777, -0.101067, 0.00779432, -0.0253379, -0.0108223, -0.0242069, -0.00900987, -0.101302, -0.0643019, -0.100866, -0.0606069, -0.0233101, -0.112556, -0.0238101, -0.111883, 0.0336495, -0.0575366, 0.0329302, -0.0594609, 0.113773, -0.010572, 0.114244, -0.0112546, 0.0335578, 0.00927, 0.032867, 0.0124957, 0.114633, 0.0532545, 0.114139 )
 
-[node name="Pin" type="PinJoint" parent="BeamSuper"]
-nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-
 [node name="Beam" type="Spatial" parent="BeamSuper"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
 
 [node name="Velocity" type="Spatial" parent="BeamSuper/Beam"]
 
-[node name="CannonRight" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.1, -0.45, 0 )
+[node name="RightCannon" type="RigidBody" parent="."]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.15, -0.45, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -119,35 +216,31 @@ axis_lock_angular_x = true
 axis_lock_angular_y = true
 linear_damp = 0.0
 
-[node name="FireRight" type="Node" parent="CannonRight"]
+[node name="FireRight" type="Node" parent="RightCannon"]
 script = ExtResource( 1 )
 projectile = ExtResource( 8 )
 fireCooldown = 0.5
 position = NodePath("../Beam")
 
-[node name="HP" type="Node" parent="CannonRight"]
+[node name="HP" type="Node" parent="RightCannon"]
 script = ExtResource( 2 )
 hp = 60
 
-[node name="Sprite" type="Sprite3D" parent="CannonRight"]
+[node name="Sprite" type="Sprite3D" parent="RightCannon"]
 texture = ExtResource( 12 )
 
-[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="CannonRight"]
+[node name="CollisionPolygon2D2" type="CollisionPolygon" parent="RightCannon"]
 depth = 0.1
 polygon = PoolVector2Array( 0.183261, -0.00633129, 0.117149, -0.0321627, 0.0832996, -0.0335257, 0.0230788, -0.0814368, -0.138122, -0.0828246, -0.195872, -0.0316109, -0.194221, 0.0262834, -0.139278, 0.0733438, 0.0202881, 0.07375, 0.0780624, 0.0166673, 0.120165, 0.0165047 )
 
-[node name="Pin" type="PinJoint" parent="CannonRight"]
-nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-
-[node name="Beam" type="Spatial" parent="CannonRight"]
+[node name="Beam" type="Spatial" parent="RightCannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.254193, 0, 0 )
 
-[node name="Velocity" type="Spatial" parent="CannonRight/Beam"]
+[node name="Velocity" type="Spatial" parent="RightCannon/Beam"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5, 0, 0 )
 
 [node name="ArmorFrontLeft" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285, 0.25, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0.225, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -167,10 +260,10 @@ texture = ExtResource( 13 )
 [node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorFrontLeft"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.00649452, 0.0193551, -0.00224595 )
 depth = 0.1
-polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
+polygon = PoolVector2Array( 0.13262, -0.144304, 0.203756, -0.144934, 0.0116443, 0.106046, -0.0654787, 0.104137, 0.00685447, 0.0145994, -0.192255, 0.0143186, -0.190086, -0.044056, 0.0526135, -0.0447987 )
 
 [node name="ArmorFrontRight" type="RigidBody" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.285, -0.25, 0 )
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, -0.225, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -187,10 +280,10 @@ texture = ExtResource( 6 )
 [node name="CollisionPolygon" type="CollisionPolygon" parent="ArmorFrontRight"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 0.001 )
 depth = 0.1
-polygon = PoolVector2Array( -0.0657206, -0.120978, 0.000191718, -0.119093, 0.179804, 0.118435, 0.116872, 0.116059, 0.0420395, 0.0216388, -0.192012, 0.0200922, -0.189518, -0.0335504, 0.00740382, -0.0297422 )
+polygon = PoolVector2Array( -0.0742173, -0.125184, 0.014744, -0.125132, 0.203479, 0.1245, 0.124519, 0.124426, 0.0468348, 0.0250026, -0.196817, 0.024358, -0.196189, -0.0347714, 0.00361052, -0.0352576 )
 
 [node name="ArmorBackLeft" type="RigidBody" parent="."]
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29, 0.45, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.3, 0.45, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -210,7 +303,7 @@ depth = 0.1
 polygon = PoolVector2Array( 0.121164, -0.135093, 0.181896, -0.13443, -0.00899398, 0.0883095, -0.0659737, 0.0896542, 0.0150949, 0.0116399, -0.192383, 0.0116798, -0.189433, -0.0400964, 0.0428184, -0.0388557 )
 
 [node name="ArmorBackRight" type="RigidBody" parent="."]
-transform = Transform( -1, 0, 0, 0, 1, 0, 0, 0, 1, -0.29, -0.45, 0 )
+transform = Transform( -1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.3, -0.45, 0 )
 mass = 0.1
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -249,11 +342,6 @@ texture = ExtResource( 4 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0938871, 0.142705, -0.23696, -0.00610106, -0.0971432, -0.148976, 0.231361, -0.146961, 0.171806, -0.0849541, 0.0183761, -0.0883016, -0.0562975, -0.000616033, 0.0156538, 0.0790166, 0.175636, 0.0753701, 0.230944, 0.143184 )
 
-[node name="Pin" type="PinJoint" parent="Drive"]
-nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-params/bias = 0.1
-
 [node name="ThrustRight" type="Node" parent="Drive"]
 script = ExtResource( 3 )
 pos = NodePath("../Source")
@@ -289,7 +377,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 2, 0, 0 )
 
 [node name="Right" type="Position3D" parent="Drive/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 5.96046e-08, -2, 0 )
-
-[node name="Heading" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.422949, 0, 0 )
-script = ExtResource( 15 )

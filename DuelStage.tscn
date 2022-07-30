@@ -30,7 +30,7 @@ font_data = ExtResource( 2 )
 [sub_resource type="Theme" id=5]
 default_font = SubResource( 4 )
 
-[node name="World" type="Node"]
+[node name="World" type="Spatial" groups=["World"]]
 
 [node name="Camera" type="Camera" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, 10 )

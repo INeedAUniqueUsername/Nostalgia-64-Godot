@@ -13,36 +13,24 @@ export(Config) var conf
 signal cannot_fire
 signal cannot_thrust
 
-var fireLeft;
-var fireRight;
-var fireMiddle;
-var thrustLeft;
-var thrustRight;
-var thrustMiddle;
-
+var FireLeft;
+var FireRight;
+var FireMiddle;
+var ThrustLeft;
+var ThrustRight;
+var ThrustMiddle;
 # Called when the node enters the scene tree for the first time.
 func init():
-	for child in get_parent().get_children():
-		for node in child.get_children():
-			var n = node.name;
-			if(n == "FireLeft"):
-				fireLeft = node;
-			if(n == "FireRight"):
-				fireRight = node;
-			if(n == "FireMiddle"):
-				fireMiddle = node;
-			if(n == "ThrustLeft"):
-				thrustLeft = node;
-			if(n == "ThrustRight"):
-				thrustRight = node;
-			if(n == "ThrustMiddle"):
-				thrustMiddle = node;
-				
-	for f in [fireLeft, fireMiddle, fireRight]:
+	for segment in get_parent().get_children():
+		for k in ["FireLeft", "FireMiddle", "FireRight", "ThrustLeft", "ThrustMiddle", "ThrustRight"]:
+			var n = segment.get_node(k)
+			if !n: continue
+			set(k, n)
+	for f in [FireLeft, FireMiddle, FireRight]:
 		if(f == null):
 			continue
 		f.connect("tree_exited", self, "updateCanFire")
-	for t in [thrustLeft, thrustMiddle, thrustRight]:
+	for t in [ThrustLeft, ThrustMiddle, ThrustRight]:
 		if(t == null):
 			continue
 		t.connect("tree_exited", self, "updateCanThrust")
@@ -56,12 +44,12 @@ func _process(delta):
 	elif(conf == Config.p2):
 		controls("p2")
 func controls(prefix):
-	check(prefix + "_left", thrustLeft)
-	check(prefix + "_right", thrustRight)
-	check(prefix + "_up", thrustMiddle)
-	check(prefix + "_fire_left", fireLeft)
-	check(prefix + "_fire_right", fireRight)
-	check(prefix + "_fire_middle", fireMiddle)
+	check(prefix + "_left", ThrustLeft)
+	check(prefix + "_right", ThrustRight)
+	check(prefix + "_up", ThrustMiddle)
+	check(prefix + "_fire_left", FireLeft)
+	check(prefix + "_fire_right", FireRight)
+	check(prefix + "_fire_middle", FireMiddle)
 func check(action, target):
 	if(!is_instance_valid(target)):
 		return
@@ -77,10 +65,10 @@ func updateCanThrust():
 	if(!canThrust()):
 		emit_signal("cannot_thrust")
 func canFire():
-	var left = (fireLeft != null && is_instance_valid(fireLeft) && fireLeft.is_inside_tree())
-	var middle = (fireMiddle != null && is_instance_valid(fireMiddle) && fireMiddle.is_inside_tree())
-	var right = (fireRight != null && is_instance_valid(fireRight) && fireRight.is_inside_tree())
+	var left = (FireLeft != null && is_instance_valid(FireLeft) && FireLeft.is_inside_tree())
+	var middle = (FireMiddle != null && is_instance_valid(FireMiddle) && FireMiddle.is_inside_tree())
+	var right = (FireRight != null && is_instance_valid(FireRight) && FireRight.is_inside_tree())
 	var result = left || middle || right
 	return result
 func canThrust():
-	return (thrustLeft != null && is_instance_valid(thrustLeft)) || (thrustMiddle != null && is_instance_valid(thrustMiddle)) || (thrustRight != null && is_instance_valid(thrustRight))
+	return (ThrustLeft != null && is_instance_valid(ThrustLeft)) || (ThrustMiddle != null && is_instance_valid(ThrustMiddle)) || (ThrustRight != null && is_instance_valid(ThrustRight))

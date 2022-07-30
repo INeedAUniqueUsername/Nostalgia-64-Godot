@@ -1,4 +1,4 @@
-[gd_scene load_steps=17 format=2]
+[gd_scene load_steps=18 format=2]
 
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/DriveMain.svg" type="Texture" id=1]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/Hull.svg" type="Texture" id=2]
@@ -16,8 +16,12 @@
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/SpecialFire.gd" type="Script" id=14]
 [ext_resource path="res://Ships/RedShift/Lightspeed-III-class courier/TurretBeam.tscn" type="PackedScene" id=15]
 [ext_resource path="res://Ships/RedShift/Lightspeed-II-class light gunship/Heading.gd" type="Script" id=16]
+[ext_resource path="res://Ship.gd" type="Script" id=17]
 
-[node name="Hull" type="RigidBody"]
+[node name="Spatial" type="Spatial"]
+script = ExtResource( 17 )
+
+[node name="Hull" type="RigidBody" parent="."]
 mass = 100.0
 gravity_scale = 0.0
 axis_lock_linear_z = true
@@ -26,20 +30,24 @@ axis_lock_angular_y = true
 linear_damp = 0.0
 angular_damp = 0.0
 
-[node name="HP" type="Node" parent="."]
+[node name="HP" type="Node" parent="Hull"]
 script = ExtResource( 9 )
 hp = 300
 
-[node name="Impact" type="Node" parent="."]
+[node name="Impact" type="Node" parent="Hull"]
 script = ExtResource( 5 )
 
-[node name="CollisionPolygon" type="CollisionPolygon" parent="."]
+[node name="CollisionPolygon" type="CollisionPolygon" parent="Hull"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0272229, -0.0311808, 0.00819361 )
 depth = 0.1
 polygon = PoolVector2Array( -0.275932, 0.230089, -0.0108369, 0.0801298, -0.00993472, 0.156234, 0.228402, 0.034954, -0.00882972, -0.0936027, -0.0103694, -0.00847799, -0.27435, -0.161227 )
 
-[node name="Sprite" type="Sprite3D" parent="."]
+[node name="Sprite" type="Sprite3D" parent="Hull"]
 texture = ExtResource( 2 )
+
+[node name="Heading" type="Spatial" parent="Hull"]
+transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0 )
+script = ExtResource( 16 )
 
 [node name="Cannon" type="RigidBody" parent="."]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.259335, 0, 0 )
@@ -67,9 +75,16 @@ texture = ExtResource( 4 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0405694, 0.0495082, 0.0355828, 0.00342222, -0.0390907, -0.0492784 )
 
-[node name="Pin" type="PinJoint" parent="Cannon"]
+[node name="Joint" type="HingeJoint" parent="Cannon"]
 nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
+nodes/node_b = NodePath("../../Hull")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
 
 [node name="Source" type="Spatial" parent="Cannon"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.3, 0, 0 )
@@ -111,9 +126,16 @@ texture = ExtResource( 3 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0260084, 0.0609383, -0.024533, 0.0954518, 0.00492634, 0.0948628, 0.091855, 0.0403937, 0.0928301, -0.0499298, 0.00153734, -0.0942923, -0.0249692, -0.0939673, -0.0251589, -0.069636, -0.0614842, -0.0611188, -0.0925901, -0.0258607, -0.0921606, 0.008346, -0.0599177, 0.0509702 )
 
-[node name="Pin" type="PinJoint" parent="Turret"]
+[node name="Joint" type="HingeJoint" parent="Turret"]
 nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
+nodes/node_b = NodePath("../../Hull")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
 
 [node name="Beam" type="Spatial" parent="Turret"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.37606, 0, 0 )
@@ -145,10 +167,16 @@ texture = ExtResource( 1 )
 depth = 0.1
 polygon = PoolVector2Array( -0.020304, -0.0829082, -0.0155602, 0.0849628, 0.0231958, 0.0853916, 0.0226025, -0.0846051 )
 
-[node name="PinJoint" type="PinJoint" parent="DriveMiddle"]
+[node name="Joint" type="HingeJoint" parent="DriveMiddle"]
 nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-params/bias = 0.1
+nodes/node_b = NodePath("../../Hull")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
 
 [node name="ThrustMiddle" type="Node" parent="DriveMiddle"]
 script = ExtResource( 8 )
@@ -184,10 +212,16 @@ texture = ExtResource( 7 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0582842, 0.0355428, 0.0594448, 0.0344651, 0.058131, -0.0350863, -0.0584317, -0.034179 )
 
-[node name="PinJoint" type="PinJoint" parent="DriveLeft"]
+[node name="Joint" type="HingeJoint" parent="DriveLeft"]
 nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-params/bias = 0.1
+nodes/node_b = NodePath("../../Hull")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
 
 [node name="ThrustRight" type="Node" parent="DriveLeft"]
 script = ExtResource( 8 )
@@ -223,10 +257,16 @@ texture = ExtResource( 7 )
 depth = 0.1
 polygon = PoolVector2Array( -0.0582842, 0.0355428, 0.0594448, 0.0344651, 0.058131, -0.0350863, -0.0584317, -0.034179 )
 
-[node name="PinJoint" type="PinJoint" parent="DriveRight"]
+[node name="Joint" type="HingeJoint" parent="DriveRight"]
 nodes/node_a = NodePath("..")
-nodes/node_b = NodePath("../..")
-params/bias = 0.1
+nodes/node_b = NodePath("../../Hull")
+params/bias = 0.99
+angular_limit/enable = true
+angular_limit/upper = 0.0
+angular_limit/lower = 0.0
+angular_limit/bias = 0.99
+angular_limit/softness = 0.01
+angular_limit/relaxation = 0.01
 
 [node name="ThrustLeft" type="Node" parent="DriveRight"]
 script = ExtResource( 8 )
@@ -241,7 +281,3 @@ transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0980332, 0, 0 )
 
 [node name="Velocity" type="Position3D" parent="DriveRight/Source"]
 transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 4, 0, 0 )
-
-[node name="Heading" type="Spatial" parent="."]
-transform = Transform( 1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4, 0, 0 )
-script = ExtResource( 16 )
